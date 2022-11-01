@@ -1,0 +1,15 @@
+.get-started-btn {
+  background-color: #008080 !important;
+  border: 1px solid #008080 !important;
+  border-radius: 50pt !important;
+  font-size: 14px !important;
+  padding-left: 20pt !important;
+  padding-right: 20pt !important;
+  padding-top: 5pt !important;
+  padding-bottom: 5pt !important;
+}
+
+.get-started-btn:hover {
+  background-color: #008080 !important;
+  opacity: 0.9 !important;
+}
