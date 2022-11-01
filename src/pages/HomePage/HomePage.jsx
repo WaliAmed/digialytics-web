@@ -6,14 +6,14 @@ import SharedButton from "../../components/Button/Button";
 
 const HomePage = () => {
   return (
-    <Container>
+    <Container
+      style={{
+        padding: "30pt 40pt",
+      }}
+    >
       {/*Hero*/}
       <Row>
-        <Col
-          style={{
-            padding: "30pt 40pt",
-          }}
-        >
+        <Col>
           <h2 className="font-500">INNOVATION.</h2>
           <h2 className="font-500">EXCELLENCE. RELIABILITY.</h2>
 
@@ -28,14 +28,14 @@ const HomePage = () => {
       </Row>
 
       {/*About Us*/}
-      <Row>
+      <Row className="mt-5">
         <Col className="about-us-section text-center p-5">
           <h2 className="font-300">About Us.</h2>
           <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
 
           <Row className="mt-5">
             <Col sm="auto" lg={5}>
-              <p className="text-start px-5">
+              <p className="text-start py-5">
                 You imagine it, We will build it. This is our motto. Our best
                 quality is our work ethic, here at Digitalytics.in We provide
                 the best service with utmost transparency and honesty. Our goal
@@ -50,8 +50,6 @@ const HomePage = () => {
           </Row>
         </Col>
       </Row>
-
-      <Row className="my-5"></Row>
     </Container>
   );
 };

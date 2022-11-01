@@ -3,6 +3,10 @@ body {
   font-family: "Poppins";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .font-300 {
   font-weight: 300;
 }
