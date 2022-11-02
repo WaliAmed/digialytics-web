@@ -7,6 +7,14 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --main-color: #008080;
+  --main-bg: #1b1c1e;
+}
+
+.font-200 {
+  font-weight: 200;
+}
 .font-300 {
   font-weight: 300;
 }

@@ -18,6 +18,7 @@ import OurProjects from "../pages/OurProjects/OurProjects";
 
 //Components
 import Navbar from "../components/NavBar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const RoutesPage = () => {
   return (
@@ -45,6 +46,9 @@ const RoutesPage = () => {
         </Route>
         <Route path="contact-us" exact element={<ContactUs />} />
       </Routes>
+
+      {/*Footer*/}
+      <Footer />
     </Router>
   );
 };
