@@ -18,16 +18,41 @@ const NavbarComponent = () => {
   };
 
   return (
-    <Navbar expand="lg" style={{ paddingTop: "20pt", paddingBottom: "20pt" }}>
+    <Navbar
+      className="navBar"
+      expand="lg"
+      style={{ paddingTop: "20pt", paddingBottom: "20pt" }}
+    >
       <Container fluid="md">
         <Navbar.Brand href="/">Digialytics</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link href="/about-us">About Us</Nav.Link>
-            <Nav.Link href="/our-domain">Our Domain</Nav.Link>
-            <Nav.Link href="/our-projects">Our Projects</Nav.Link>
-            <NavDropdown
+            {/* <Nav.Link className="animated-border" href="/about-us">
+              About Us
+            </Nav.Link> */}
+            <Nav.Link
+              className="animated-border"
+              href="#our-domain-section"
+              // href="/our-domain"
+            >
+              Our Domain
+            </Nav.Link>
+            <Nav.Link
+              className="animated-border"
+              href="#our-projects-section"
+              // href="/our-projects"
+            >
+              Our Projects
+            </Nav.Link>
+            <Nav.Link
+              className="animated-border"
+              href="#our-solution-section"
+              // href="/our-projects"
+            >
+              Our Solutions
+            </Nav.Link>
+            {/* <NavDropdown
               onClick={() => navigate("our-solutions")}
               show={show}
               onMouseEnter={showDropdown}
@@ -35,31 +60,50 @@ const NavbarComponent = () => {
               title="OUR SOLUTIONS"
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="/our-solutions/natural-language-processing">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/natural-language-processing"
+              >
                 NLP (Natural Language Processing)
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/our-solutions/computer-vision">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/computer-vision"
+              >
                 CV (Computer Vision)
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/our-solutions/forecasting">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/forecasting"
+              >
                 Forecasting/ Time Series
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/our-solutions/dev-ops">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/dev-ops"
+              >
                 Dev Ops
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/our-solutions/advanced-analytics">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/advanced-analytics"
+              >
                 BI &amp; Advanced Analytics
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/our-solutions/mobile-and-web-development">
+              <NavDropdown.Item
+                className="animated-border"
+                href="/our-solutions/mobile-and-web-development"
+              >
                 Mobile App&amp; Web Development
               </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link className="nav-bar-contactus" href="/contact-us">
+            </NavDropdown> */}
+
+            <Nav.Link className="nav-bar-contactus" href="#contact-us-section">
               Contact Us
             </Nav.Link>
           </Nav>

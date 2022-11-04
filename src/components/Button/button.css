@@ -10,8 +10,8 @@
 }
 
 .shared-btn:hover {
-  background-color: var(--main-color) !important;
-  opacity: 0.9 !important;
+  background-color: transparent !important;
+  color: var(--main-color) !important;
 }
 
 .shared-btn-light {
@@ -27,8 +27,8 @@
 }
 
 .shared-btn-light:hover {
-  background-color: white !important;
-  opacity: 0.9 !important;
+  background-color: transparent !important;
+  color: white !important;
 }
 
 #bordered-card {

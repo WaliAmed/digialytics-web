@@ -40,40 +40,72 @@ const ProjectSlider = () => {
   }
 
   var settings = {
-    className: "SliderCenter",
-    centerMode: true,
     infinite: true,
-    centerPadding: "60px",
-    dots: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    centerMode: true,
+    className: "centerSlide",
   };
+
+  let projects = [
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+    },
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can improve customers’ experience with our skillset. We can automate existing solutions and also build new solutions from scratch for better user experience.",
+    },
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+    },
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+    },
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+    },
+    {
+      img: "assets/img.png",
+      title: "Project Name",
+      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+    },
+  ];
+
   return (
     <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+      {projects.map((items, index) => {
+        return (
+          <div style={{ width: "100%" }} key={index}>
+            <div className="card-wrapper">
+              <img src={items.img} alt="img" style={{ height: "130pt" }} />
+
+              <h5
+                className="font-400"
+                style={{ marginTop: "12pt", marginBottom: "8pt" }}
+              >
+                {items.title}
+              </h5>
+
+              <p className="font-300">{items.desc}</p>
+            </div>
+          </div>
+        );
+      })}
     </Slider>
   );
 };

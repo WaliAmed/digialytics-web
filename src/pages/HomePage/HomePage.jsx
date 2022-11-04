@@ -6,6 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
+//Packages
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 //Components
 import SharedButton from "../../components/Button/Button";
 import BorderedCard from "../../components/Cards/BorderedCard";
@@ -17,23 +21,28 @@ import SoftwareDevelopment from "../../assets/icons/SoftwareDevelopment";
 import Automation from "../../assets/icons/Automation";
 import SharedButtonLight from "../../components/Button/ButtonLight";
 import SharedCard from "../../components/Cards/Card";
+import TransparentCard from "../../components/Cards/TransparentCard";
 
 const HomePage = () => {
   return (
     <div className="container-fluied">
       {/*Hero*/}
       <Row className="md-container mt-5" style={{ marginBottom: "80pt" }}>
-        <Col>
+        <Col lg={8}>
           <h2 className="font-500">INNOVATION.</h2>
           <h2 className="font-500">EXCELLENCE. RELIABILITY.</h2>
 
-          <p style={{ width: "65%", marginBottom: "25pt" }}>
+          <p style={{ width: "100%", marginBottom: "25pt" }}>
             We can solve problems which cannot be solved via traditional
             software development. We can integrate AI and ML to your programs to
             improve the efficiency and quality of your product.
           </p>
 
           <SharedButton title="GET STARTED" />
+        </Col>
+
+        <Col lg={4}>
+          <img src="assets/person.png" alt="img" style={{ height: "270pt" }} />
         </Col>
       </Row>
 
@@ -71,6 +80,80 @@ const HomePage = () => {
             </Col>
           </Row>
         </Col>
+      </Row>
+
+      {/*Separator*/}
+      <Row className="my-5">
+        <div
+          className="text-center py-5"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "var(--main-color)",
+          }}
+        >
+          <div style={{ width: "75%" }}>
+            <p className="text-white">
+              We can solve problems which cannot be solved via traditional
+              software development. We can integrate AI and ML to your programs
+              to improve the efficiency and quality of your product.
+            </p>
+          </div>
+        </div>
+      </Row>
+
+      {/*Our Solutions*/}
+      <div id="our-solution-section" className="my-5 py-5">
+        <Row className="mb-3">
+          <Col className="text-center mb-3">
+            <h2 className="font-300">What we do?</h2>
+          </Col>
+        </Row>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Row style={{ width: "65%" }}>
+            <Col className="text-center" lg={4}>
+              <TransparentCard
+                bg-color="#F8F9FA"
+                img={"assets/img1.png"}
+                title="Increase your business"
+                desc="We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X."
+              />
+            </Col>
+            <Col className="text-center" lg={4}>
+              <TransparentCard
+                bg-color="rgba(0, 128, 128, 0.1)"
+                img={"assets/img2.png"}
+                title="Give a better experience to users"
+                desc="We can improve customers’ experience with our skillset. We can automate existing solutions and also build new solutions from scratch for better user experience."
+              />
+            </Col>
+            <Col className="text-center" lg={4}>
+              <TransparentCard
+                bg-color="#F8F9FA"
+                img={"assets/img3.png"}
+                title="Solve problems"
+                desc="We can solve problems which cannot be solved via traditional software development. We can integrate AI and ML to your programs to improve the efficiency and quality of your product."
+              />
+            </Col>
+          </Row>
+        </div>
+      </div>
+
+      {/*Separator*/}
+      <div id="our-domain-section"></div>
+      <Row className="my-5">
+        <div
+          className="text-center main-bg py-5"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <div style={{ width: "75%" }}>
+            <p className="text-white">
+              We can solve problems which cannot be solved via traditional
+              software development. We can integrate AI and ML to your programs
+              to improve the efficiency and quality of your product.
+            </p>
+          </div>
+        </div>
       </Row>
 
       {/*Our Domain*/}
@@ -140,8 +223,9 @@ const HomePage = () => {
       </Row>
 
       {/*Our Projects*/}
+      <div id="our-projects-section"></div>
       <Row className="my-5 py-5">
-        <Col className="text-center mb-5">
+        <Col className="text-center mb-3">
           <h2 className="font-300">Our Projects</h2>
         </Col>
 
@@ -150,6 +234,14 @@ const HomePage = () => {
             <div style={{ width: "75%" }}>
               <ProjectSlider />
             </div>
+          </div>
+        </Row>
+
+        <Row>
+          <div className="text-center mt-4">
+            <a href="/" className="link-text">
+              <small>Learn More</small>
+            </a>
           </div>
         </Row>
       </Row>
@@ -212,6 +304,7 @@ const HomePage = () => {
       </div>
 
       {/*Contact*/}
+      <div id="contact-us-section"></div>
       <Container
         style={{ width: "75%", marginTop: "80pt", marginBottom: "60pt" }}
       >
@@ -232,7 +325,12 @@ const HomePage = () => {
                   <Form.Control type="email" placeholder="Email" />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control type="number" placeholder="Phone" />
+                  {/* <Form.Control type="number" placeholder="Phone" /> */}
+                  <PhoneInput
+                    country={"us"}
+                    // value={this.state.phone}
+                    // onChange={(phone) => this.setState({ phone })}
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Control as="textarea" rows={3} placeholder="Message" />
