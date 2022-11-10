@@ -35,3 +35,42 @@
   border: 1px solid white;
   color: white;
 }
+
+@media (max-width: 480px) {
+  #footerLogoSection {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 10pt;
+  }
+
+  #footerLogoSection div {
+    gap: 30pt !important;
+  }
+  #footerLogoSection div a {
+    margin: 0px !important;
+  }
+  #footerListSection {
+    text-align: center !important;
+  }
+  #footerListSection ul {
+    padding-left: 0px !important;
+  }
+  #NewsLetterTitle {
+    margin-bottom: 20pt;
+    text-align: center !important;
+  }
+  #NewsLetterCol {
+    display: block !important;
+  }
+  #NewsLetterCol div {
+    text-align: center !important;
+  }
+  #NewsLetterCol button {
+    margin-top: 10pt !important;
+    width: 90% !important;
+    margin-bottom: 10pt !important;
+  }
+  #PrivacyConditions {
+    justify-content: center !important;
+  }
+}

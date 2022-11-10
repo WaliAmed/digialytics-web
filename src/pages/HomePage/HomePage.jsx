@@ -27,8 +27,12 @@ const HomePage = () => {
   return (
     <div className="container-fluied">
       {/*Hero*/}
-      <Row className="md-container mt-5" style={{ marginBottom: "80pt" }}>
-        <Col lg={8}>
+      <Row
+        id="hero-section"
+        className="md-container mt-5"
+        style={{ marginBottom: "80pt" }}
+      >
+        <Col sm={12} lg={8} className="hero-left">
           <h2 className="font-500">INNOVATION.</h2>
           <h2 className="font-500">EXCELLENCE. RELIABILITY.</h2>
 
@@ -41,7 +45,7 @@ const HomePage = () => {
           <SharedButton title="GET STARTED" />
         </Col>
 
-        <Col lg={4}>
+        <Col sm={12} lg={4} className="hero-right">
           <img src="assets/person.png" alt="img" style={{ height: "270pt" }} />
         </Col>
       </Row>
@@ -53,7 +57,7 @@ const HomePage = () => {
           <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
 
           <Row className="mt-5">
-            <Col sm="auto" lg={6}>
+            <Col id="aboutUsCol" sm="auto" lg={6}>
               <div
                 style={{
                   display: "flex",
@@ -76,7 +80,13 @@ const HomePage = () => {
             </Col>
 
             <Col sm="auto" lg={6} className="text-start">
-              <img src="assets/img.png" alt="img" style={{ height: "300px" }} />
+              <img
+                id="aboutUsImg"
+                className="about-us-img"
+                src="assets/img.png"
+                alt="img"
+                style={{ height: "300px" }}
+              />
             </Col>
           </Row>
         </Col>
@@ -110,8 +120,8 @@ const HomePage = () => {
           </Col>
         </Row>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Row style={{ width: "65%" }}>
-            <Col className="text-center" lg={4}>
+          <Row id="ourSolutionRow" style={{ width: "65%" }}>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="#F8F9FA"
                 img={"assets/img1.png"}
@@ -119,7 +129,7 @@ const HomePage = () => {
                 desc="We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X."
               />
             </Col>
-            <Col className="text-center" lg={4}>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="rgba(0, 128, 128, 0.1)"
                 img={"assets/img2.png"}
@@ -127,7 +137,7 @@ const HomePage = () => {
                 desc="We can improve customers’ experience with our skillset. We can automate existing solutions and also build new solutions from scratch for better user experience."
               />
             </Col>
-            <Col className="text-center" lg={4}>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="#F8F9FA"
                 img={"assets/img3.png"}
@@ -162,24 +172,24 @@ const HomePage = () => {
           <h2 className="font-300">Our Domain</h2>
         </Col>
         <Row>
-          <Col lg={4} sm={"auto"} className="text-center">
+          <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
             <Row className="mb-3">
               <ResearchIcon />
             </Row>
             <h5 className="font-400">Research</h5>
-            <p className="px-5">
+            <p className="px-5" id="ourDomainDesc">
               Our team analyses the problem, looks for the best possible
               solution and then implements it. If there is no solution
               available, our team has the capability to innovate new solutions
               tailor-made to clients’ requirements.
             </p>
           </Col>
-          <Col lg={4} sm={"auto"} className="text-center">
+          <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
             <Row className="mb-3">
               <SoftwareDevelopment />
             </Row>
             <h5 className="font-400">Software Development</h5>
-            <p className="px-5">
+            <p className="px-5" id="ourDomainDesc">
               We provide B2B products to our clients. We can provide Web
               Applications, Android and IOS Applications as per requirement. We
               have a team of software developers who can take any task head-on.
@@ -190,7 +200,7 @@ const HomePage = () => {
               <Automation />
             </Row>
             <h5 className="font-400">Automation</h5>
-            <p className="px-5">
+            <p className="px-5" id="ourDomainDesc">
               If you have an existing system that needs automation or you want
               to integrate Machine Learning to your program, we can help you
               build such a solution.
@@ -250,13 +260,13 @@ const HomePage = () => {
       <div className="container-fluied main-bg" style={{ padding: "60pt 0pt" }}>
         <Container style={{ width: "75%" }}>
           <Row>
-            <Col lg={10} className="mb-5">
+            <Col id="ourTopStoriesCol" lg={10} sm={12} className="mb-5">
               <h2 className="font-300 text-white">Our top Stories</h2>
               <small className="text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
               </small>
             </Col>
-            <Col lg={2}>
+            <Col id="ourTopStoriesCol" lg={2} sm={12}>
               <div className="mt-2 text-end">
                 <SharedButtonLight title="View All" />
               </div>
@@ -264,7 +274,12 @@ const HomePage = () => {
           </Row>
 
           <Row>
-            <Col lg={4} sm={"auto"}>
+            <Col
+              id="ourTopStoriesCol2"
+              className="ourTopStoriesCol2A"
+              lg={4}
+              sm={12}
+            >
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <BorderedCard
                   timeToRead="5 min read"
@@ -276,7 +291,12 @@ const HomePage = () => {
               </div>
             </Col>
 
-            <Col lg={4} sm={"auto"}>
+            <Col
+              id="ourTopStoriesCol2"
+              className="ourTopStoriesCol2A"
+              lg={4}
+              sm={12}
+            >
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <SharedCard
                   timeToRead="5 min read"
@@ -288,7 +308,7 @@ const HomePage = () => {
               </div>
             </Col>
 
-            <Col lg={4} sm={"auto"}>
+            <Col id="ourTopStoriesCol2" lg={4} sm={12}>
               <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 <BorderedCard
                   timeToRead="5 min read"

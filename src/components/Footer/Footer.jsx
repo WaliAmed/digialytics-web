@@ -28,12 +28,12 @@ const Footer = () => {
         >
           <div>
             <Row>
-              <Col lg={6}>
+              <Col id="footerLogoSection" sm="auto" lg={6}>
                 <div>
                   <h5 className="font-300">Digialytics</h5>
                 </div>
               </Col>
-              <Col lg={6}>
+              <Col id="footerLogoSection" sm="auto" lg={6}>
                 <div style={{ display: "flex", flexDirection: "row-reverse" }}>
                   <a href="/" className="footer-icon">
                     <FaLinkedinIn />
@@ -53,7 +53,7 @@ const Footer = () => {
 
           <div className="mt-4">
             <Row>
-              <Col lg={2}>
+              <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
                     <li
@@ -71,7 +71,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg={2}>
+              <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
                     <li
@@ -88,7 +88,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg={2}>
+              <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
                     <li
@@ -106,7 +106,7 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col lg={2}>
+              <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <div>
                     <ul className="footer-ul">
@@ -125,7 +125,7 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col lg={4}>
+              <Col id="footerListSection" sm={12} lg={4}>
                 <div>
                   <div>
                     <ul className="footer-ul">
@@ -155,22 +155,24 @@ const Footer = () => {
           <div>
             <Row>
               <Col lg={6}>
-                <div>
+                <div id="NewsLetterTitle">
                   <h5 className="font-300">Signup for our Newsletter</h5>
                 </div>
               </Col>
               <Col lg={6}>
                 <div
+                  id="NewsLetterCol"
                   style={{
                     display: "flex",
-                    flexDirection: "row-reverse",
                     alignItems: "center",
                   }}
                 >
-                  <ButtonLight title="Submit" />
-
                   <div className="me-5" style={{ width: "100%" }}>
                     <input className="newsletter" placeholder="Email Id" />
+                  </div>
+
+                  <div>
+                    <ButtonLight title="Submit" />
                   </div>
                 </div>
               </Col>
@@ -181,8 +183,11 @@ const Footer = () => {
 
           <div>
             <Row>
-              <Col lg={12}>
-                <div style={{ display: "flex", alignItems: "center" }}>
+              <Col sm="auto" lg={12}>
+                <div
+                  id="PrivacyConditions"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
                   <a
                     className="link-text font-200"
                     style={{ color: "grey", fontSize: "0.7rem" }}

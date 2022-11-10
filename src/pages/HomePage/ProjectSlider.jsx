@@ -2,11 +2,14 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useMediaQuery } from "react-responsive";
 
 //Icons
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const ProjectSlider = () => {
+  const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -49,8 +52,34 @@ const ProjectSlider = () => {
     pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    centerMode: true,
-    className: "centerSlide",
+    centerMode: isMobileScreen === true ? true : false,
+    className: isMobileScreen === true ? "centerSlide" : "",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   let projects = [

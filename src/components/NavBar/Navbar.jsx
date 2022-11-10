@@ -23,11 +23,11 @@ const NavbarComponent = () => {
       expand="lg"
       style={{ paddingTop: "20pt", paddingBottom: "20pt" }}
     >
-      <Container fluid="md">
+      <Container fluid="md" id="navnav">
         <Navbar.Brand href="/">Digialytics</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav>
+          <Nav className="navitems">
             {/* <Nav.Link className="animated-border" href="/about-us">
               About Us
             </Nav.Link> */}
