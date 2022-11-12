@@ -30,7 +30,7 @@ const Footer = () => {
             <Row>
               <Col id="footerLogoSection" sm="auto" lg={6}>
                 <div>
-                  <h5 className="font-300">Digialytics</h5>
+                  <h5 className="font-300">Digitalytics</h5>
                 </div>
               </Col>
               <Col id="footerLogoSection" sm="auto" lg={6}>

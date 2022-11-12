@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
@@ -22,8 +22,26 @@ import Automation from "../../assets/icons/Automation";
 import SharedButtonLight from "../../components/Button/ButtonLight";
 import SharedCard from "../../components/Cards/Card";
 import TransparentCard from "../../components/Cards/TransparentCard";
+import FormApi from "../../Api/FormApi";
 
 const HomePage = () => {
+  const [Loader, setLoader] = useState(false);
+  const [FormData, setFormData] = useState([
+    {
+      name: "",
+      email: "",
+      phone_number: "",
+      message: "",
+    },
+  ]);
+
+  const getFormData = (text, field) => {
+    let DataArray = [...FormData];
+    DataArray[0][field] = text;
+
+    setFormData(DataArray);
+  };
+
   return (
     <div className="container-fluied">
       {/*Hero*/}
@@ -99,7 +117,7 @@ const HomePage = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "var(--main-color)",
+            backgroundColor: "var(--main-bg)",
           }}
         >
           <div style={{ width: "75%" }}>
@@ -329,7 +347,7 @@ const HomePage = () => {
         style={{ width: "75%", marginTop: "80pt", marginBottom: "60pt" }}
       >
         <Row className="my-5">
-          <Col lg={6}>
+          <Col id="FormText" sm={12} lg={6}>
             <h2 className="font-300">
               Have a question? <br />
               We are here to help.
@@ -339,25 +357,41 @@ const HomePage = () => {
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <Form style={{ width: "100%" }}>
                 <Form.Group className="mb-3">
-                  <Form.Control type="text" placeholder="Name" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Name"
+                    onChange={(e) => getFormData(e.target.value, "name")}
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control type="email" placeholder="Email" />
+                  <Form.Control
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => getFormData(e.target.value, "email")}
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3">
                   {/* <Form.Control type="number" placeholder="Phone" /> */}
                   <PhoneInput
                     country={"us"}
-                    // value={this.state.phone}
-                    // onChange={(phone) => this.setState({ phone })}
+                    onChange={(e) => getFormData(e, "phone_number")}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Control as="textarea" rows={3} placeholder="Message" />
+                  <Form.Control
+                    as="textarea"
+                    rows={3}
+                    placeholder="Message"
+                    onChange={(e) => getFormData(e.target.value, "message")}
+                  />
                 </Form.Group>
 
                 <div className="text-end mt-4">
-                  <SharedButton title="Submit" />
+                  <SharedButton
+                    title={Loader === true ? "---" : "Submit"}
+                    data={FormData[0]}
+                    setLoader={setLoader}
+                  />
                 </div>
               </Form>
             </div>

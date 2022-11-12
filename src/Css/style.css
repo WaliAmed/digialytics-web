@@ -176,4 +176,8 @@
     width: 100% !important;
     margin-top: 10pt;
   }
+  #FormText {
+    text-align: center !important;
+    margin-bottom: 5pt;
+  }
 }
