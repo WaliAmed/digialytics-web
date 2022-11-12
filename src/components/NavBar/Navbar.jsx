@@ -18,13 +18,15 @@ const NavbarComponent = () => {
   };
 
   return (
-    <Navbar
-      className="navBar"
-      expand="lg"
-      style={{ paddingTop: "20pt", paddingBottom: "20pt" }}
-    >
+    <Navbar className="navBar" expand="lg" style={{ paddingBottom: "20pt" }}>
       <Container fluid="md" id="navnav">
-        <Navbar.Brand href="/">Digialytics</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img
+            src="assets/Digitalytics2.png"
+            alt="logo"
+            style={{ height: "70pt" }}
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="navitems">

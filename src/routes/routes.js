@@ -20,9 +20,27 @@ import OurProjects from "../pages/OurProjects/OurProjects";
 import Navbar from "../components/NavBar/Navbar";
 import Footer from "../components/Footer/Footer";
 
+//Package
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const RoutesPage = () => {
   return (
     <Router>
+      {/*Toast Mesasge*/}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       {/*Nav Bar*/}
       <Navbar />
 

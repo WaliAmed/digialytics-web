@@ -23,7 +23,7 @@ const BorderedCard = (props) => {
             <small
               style={{
                 fontSize: "0.7rem",
-                color: "var(--main-color)",
+                color: "white",
               }}
             >
               {props.linkText} <span className="ms-2">{">"}</span>

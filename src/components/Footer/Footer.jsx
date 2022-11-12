@@ -56,10 +56,7 @@ const Footer = () => {
               <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
-                    <li
-                      className="font-300 mb-4"
-                      style={{ color: "var(--main-color)" }}
-                    >
+                    <li className="font-300 mb-4" style={{ color: "white" }}>
                       Home
                     </li>
                     <li>Lorem</li>
@@ -74,10 +71,7 @@ const Footer = () => {
               <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
-                    <li
-                      className="font-300 mb-4"
-                      style={{ color: "var(--main-color)" }}
-                    >
+                    <li className="font-300 mb-4" style={{ color: "white" }}>
                       About Us
                     </li>
                     <li>Lorem</li>
@@ -91,10 +85,7 @@ const Footer = () => {
               <Col id="footerListSection" sm={12} lg={2}>
                 <div>
                   <ul className="footer-ul">
-                    <li
-                      className="font-300 mb-4"
-                      style={{ color: "var(--main-color)" }}
-                    >
+                    <li className="font-300 mb-4" style={{ color: "white" }}>
                       Our Domain
                     </li>
                     <li>Lorem</li>
@@ -110,10 +101,7 @@ const Footer = () => {
                 <div>
                   <div>
                     <ul className="footer-ul">
-                      <li
-                        className="font-300 mb-4"
-                        style={{ color: "var(--main-color)" }}
-                      >
+                      <li className="font-300 mb-4" style={{ color: "white" }}>
                         Our Projects
                       </li>
                       <li>Lorem</li>
@@ -129,10 +117,7 @@ const Footer = () => {
                 <div>
                   <div>
                     <ul className="footer-ul">
-                      <li
-                        className="font-300 mb-4"
-                        style={{ color: "var(--main-color)" }}
-                      >
+                      <li className="font-300 mb-4" style={{ color: "white" }}>
                         Our Solutions
                       </li>
                       <li>Lorem</li>

@@ -1,4 +1,6 @@
-const FormApi = (data, setLoader) => {
+import { toast } from "react-toastify";
+
+const FormApi = (data, setLoader, setFormData) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -9,8 +11,6 @@ const FormApi = (data, setLoader) => {
     message: data.message,
   });
 
-  console.log(JSON.parse(raw));
-
   var requestOptions = {
     method: "POST",
     headers: myHeaders,
@@ -19,11 +19,30 @@ const FormApi = (data, setLoader) => {
   };
 
   fetch(process.env.REACT_APP_API_URL + "/form/create", requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((result) => {
-      setLoader(false);
+      console.log(result);
+
+      if (result.message && result.message.errors) {
+        toast.error("Error!");
+        setLoader(false);
+      } else if (result) {
+        toast.success("Message sent successfully!");
+        setLoader(false);
+        setFormData([
+          {
+            name: "",
+            email: "",
+            phone_number: "",
+            message: "",
+          },
+        ]);
+      }
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => {
+      console.log("error", error);
+      toast.error("Error!");
+    });
 };
 
 export default FormApi;

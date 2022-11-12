@@ -1,6 +1,6 @@
 .navbar-nav a {
   color: black;
-  font-size: 0.8rem;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .main-bg {
-  background-color: var(--main-bg);
+  background: var(--main-bg);
 }
 
 .md-container {
@@ -130,7 +130,7 @@
     margin-bottom: 40pt !important;
   }
   #ourSolutionCol {
-    margin-bottom: 10pt;
+    margin-bottom: 20pt;
   }
   #ourSolutionRow {
     width: 90% !important;
@@ -179,5 +179,36 @@
   #FormText {
     text-align: center !important;
     margin-bottom: 5pt;
+  }
+  .hero-right img {
+    height: 160pt !important;
+  }
+  #newsLetterInput {
+    width: 100% !important;
+  }
+  #newsLetterInput input {
+    width: 80% !important;
+  }
+  #newsLetterCol {
+    display: block !important;
+  }
+  #newsLetterCol div {
+    text-align: center !important;
+  }
+  #newsLetterCol button {
+    margin-top: 10pt !important;
+    width: 70% !important;
+    margin-bottom: 10pt !important;
+  }
+  .contactUsP {
+    padding: 0 !important;
+  }
+  #ContactUsRow {
+    margin-top: 60pt !important;
+  }
+  #NewsLetterButton {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
 }

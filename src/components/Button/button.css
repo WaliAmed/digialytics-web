@@ -14,6 +14,52 @@
   color: var(--main-color) !important;
 }
 
+.shared-btn:focus {
+  border: 1px solid var(--main-color) !important;
+}
+
+.ApiButton {
+  width: 90pt !important;
+  border-radius: 50px !important;
+  background-color: var(--main-color) !important;
+  padding-top: 5pt !important;
+  padding-bottom: 5pt !important;
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+}
+
+.ApiButton:hover {
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+}
+
+.ApiButton:focus {
+  border: 1px solid var(--main-color) !important;
+}
+
+.ApiButtonLight {
+  width: 90pt !important;
+  border-radius: 50px !important;
+  background-color: white !important;
+  padding-top: 5pt !important;
+  padding-bottom: 5pt !important;
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  color: var(--main-color) !important;
+  border: 1px solid white !important;
+}
+
+.ApiButtonLight:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.ApiButtonLight:focus {
+  border: 1px solid white !important;
+}
+
 .shared-btn-light {
   background-color: white !important;
   border: 1px solid white !important;

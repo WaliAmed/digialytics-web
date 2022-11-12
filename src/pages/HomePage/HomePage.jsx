@@ -14,6 +14,7 @@ import "react-phone-input-2/lib/style.css";
 import SharedButton from "../../components/Button/Button";
 import BorderedCard from "../../components/Cards/BorderedCard";
 import ProjectSlider from "./ProjectSlider";
+import ButtonLight from "../../components/Button/ButtonLight";
 
 //Icons
 import ResearchIcon from "../../assets/icons/ResearchIcon";
@@ -22,7 +23,6 @@ import Automation from "../../assets/icons/Automation";
 import SharedButtonLight from "../../components/Button/ButtonLight";
 import SharedCard from "../../components/Cards/Card";
 import TransparentCard from "../../components/Cards/TransparentCard";
-import FormApi from "../../Api/FormApi";
 
 const HomePage = () => {
   const [Loader, setLoader] = useState(false);
@@ -42,6 +42,9 @@ const HomePage = () => {
     setFormData(DataArray);
   };
 
+  const [NewsLetterBtnLoader, setNewsLetterBtnLoader] = useState(false);
+  const [NewsLetterEmail, setNewsLetterEmail] = useState("");
+
   return (
     <div className="container-fluied">
       {/*Hero*/}
@@ -50,25 +53,59 @@ const HomePage = () => {
         className="md-container mt-5"
         style={{ marginBottom: "80pt" }}
       >
-        <Col sm={12} lg={8} className="hero-left">
-          <h2 className="font-500">INNOVATION.</h2>
-          <h2 className="font-500">EXCELLENCE. RELIABILITY.</h2>
+        <Col sm={12} lg={7} className="hero-left">
+          <h2 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h2>
 
           <p style={{ width: "100%", marginBottom: "25pt" }}>
-            We can solve problems which cannot be solved via traditional
-            software development. We can integrate AI and ML to your programs to
-            improve the efficiency and quality of your product.
+            Providing customers all around the globe with the best computer
+            software solutions. Developing algorithms and methodologies for your
+            problems using advanced software techniques, like Artificial
+            Intelligence and Machine Learning, to improve the efficiency and
+            quality of your product.
           </p>
 
-          <SharedButton title="GET STARTED" />
+          <SharedButton title="SUBSCRIBE" />
         </Col>
 
-        <Col sm={12} lg={4} className="hero-right">
-          <img src="assets/person.png" alt="img" style={{ height: "270pt" }} />
+        <Col sm={12} lg={5} className="hero-right">
+          <img src="assets/Laptop.png" alt="img" style={{ height: "270pt" }} />
         </Col>
       </Row>
 
       {/*About Us*/}
+      <Row
+        className="my-5 py-5 text-white"
+        style={{ background: "var(--main-bg)" }}
+      >
+        <Col lg={12} className="text-center py-4">
+          <h2 className="font-300">About Us</h2>
+          <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
+        </Col>
+        <Col lg={12} className="text-center pb-4">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <p
+              className="font-300"
+              style={{
+                width: "70%",
+              }}
+            >
+              We solve software problems which cannot be solved via traditional
+              software development. We use advanced tech methodoligies in our
+              solutions by integrating AI (Artificial intelligence) , ML
+              (machine learning), NLP (Natural Language Programming) and CV
+              (computer vision) techniques to your programs to improve the
+              efficiency and quality of your product.
+            </p>
+          </div>
+        </Col>
+      </Row>
+
+      {/* About Us
       <Row className="mt-5 md-container">
         <Col className="about-us-section text-center p-5">
           <h2 className="font-300">About Us</h2>
@@ -108,10 +145,10 @@ const HomePage = () => {
             </Col>
           </Row>
         </Col>
-      </Row>
+      </Row> */}
 
       {/*Separator*/}
-      <Row className="my-5">
+      {/* <Row className="my-5">
         <div
           className="text-center py-5"
           style={{
@@ -128,103 +165,90 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-      </Row>
+      </Row> */}
 
-      {/*Our Solutions*/}
+      {/*WHY HIRE US?*/}
       <div id="our-solution-section" className="my-5 py-5">
         <Row className="mb-3">
           <Col className="text-center mb-3">
-            <h2 className="font-300">What we do?</h2>
+            <h2 className="font-300">WHY HIRE US?</h2>
           </Col>
         </Row>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Row id="ourSolutionRow" style={{ width: "65%" }}>
+          <Row id="ourSolutionRow" style={{ width: "70%" }}>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="#F8F9FA"
                 img={"assets/img1.png"}
-                title="Increase your business"
-                desc="We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X."
+                title="Build and Operate a Cloud Native Platform"
+                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
               />
             </Col>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="rgba(0, 128, 128, 0.1)"
                 img={"assets/img2.png"}
-                title="Give a better experience to users"
-                desc="We can improve customers’ experience with our skillset. We can automate existing solutions and also build new solutions from scratch for better user experience."
+                title="Increase your business"
+                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
               />
             </Col>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 bg-color="#F8F9FA"
                 img={"assets/img3.png"}
-                title="Solve problems"
-                desc="We can solve problems which cannot be solved via traditional software development. We can integrate AI and ML to your programs to improve the efficiency and quality of your product."
+                title="Secure the Hybrid Workforce"
+                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
               />
             </Col>
           </Row>
         </div>
       </div>
 
-      {/*Separator*/}
-      <div id="our-domain-section"></div>
-      <Row className="my-5">
-        <div
-          className="text-center main-bg py-5"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <div style={{ width: "75%" }}>
-            <p className="text-white">
-              We can solve problems which cannot be solved via traditional
-              software development. We can integrate AI and ML to your programs
-              to improve the efficiency and quality of your product.
-            </p>
-          </div>
-        </div>
-      </Row>
-
-      {/*Our Domain*/}
-      <Row className="mt-5 md-container">
+      {/*WHAT WE DO*/}
+      <Row id="our-domain-section" className="mt-5 md-container">
         <Col className="text-center mb-5">
-          <h2 className="font-300">Our Domain</h2>
+          <h2 className="font-300">WHAT WE DO</h2>
         </Col>
-        <Row>
-          <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
-            <Row className="mb-3">
-              <ResearchIcon />
-            </Row>
-            <h5 className="font-400">Research</h5>
-            <p className="px-5" id="ourDomainDesc">
-              Our team analyses the problem, looks for the best possible
-              solution and then implements it. If there is no solution
-              available, our team has the capability to innovate new solutions
-              tailor-made to clients’ requirements.
-            </p>
-          </Col>
-          <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
-            <Row className="mb-3">
-              <SoftwareDevelopment />
-            </Row>
-            <h5 className="font-400">Software Development</h5>
-            <p className="px-5" id="ourDomainDesc">
-              We provide B2B products to our clients. We can provide Web
-              Applications, Android and IOS Applications as per requirement. We
-              have a team of software developers who can take any task head-on.
-            </p>
-          </Col>
-          <Col lg={4} sm={"auto"} className="text-center">
-            <Row className="mb-3">
-              <Automation />
-            </Row>
-            <h5 className="font-400">Automation</h5>
-            <p className="px-5" id="ourDomainDesc">
-              If you have an existing system that needs automation or you want
-              to integrate Machine Learning to your program, we can help you
-              build such a solution.
-            </p>
-          </Col>
-        </Row>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Row style={{ width: "90%" }}>
+            <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
+              <Row className="mb-3">
+                <ResearchIcon />
+              </Row>
+              <h5 className="font-400">Research</h5>
+              <p className="px-5" id="ourDomainDesc">
+                Our team analyses the problem, looks for the best possible
+                solution and then implements it. If there is no solution
+                available, our team has the capability to innovate new solutions
+                tailor-made to clients’ requirements.
+              </p>
+            </Col>
+            <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
+              <Row className="mb-3">
+                <SoftwareDevelopment />
+              </Row>
+              <h5 className="font-400">Software Development</h5>
+              <p className="px-5" id="ourDomainDesc">
+                We provide B2B products to our clients. We can provide Web
+                Applications, Android and IOS Applications as per requirement.
+                We have a team of software developers who can take any task
+                head-on.
+              </p>
+            </Col>
+            <Col lg={4} sm={"auto"} className="text-center">
+              <Row className="mb-3">
+                <Automation />
+              </Row>
+              <h5 className="font-400">Automation</h5>
+              <p className="px-5" id="ourDomainDesc">
+                If you have an existing system that needs automation or you want
+                to integrate Machine Learning to your program, we can help you
+                build such a solution.
+              </p>
+            </Col>
+          </Row>
+        </div>
+
         <Row>
           <div className="text-center mt-5">
             <a href="/" className="link-text">
@@ -234,20 +258,54 @@ const HomePage = () => {
         </Row>
       </Row>
 
-      {/*Separator*/}
-      <Row className="my-5">
-        <div
-          className="text-center main-bg py-5"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <div style={{ width: "75%" }}>
-            <p className="text-white">
-              We can solve problems which cannot be solved via traditional
-              software development. We can integrate AI and ML to your programs
-              to improve the efficiency and quality of your product.
-            </p>
+      {/*News Letter*/}
+      <Row
+        className="py-5 text-white"
+        style={{
+          // borderRadius: "0 0 50%/100px 100px",
+          background: "linear-gradient(360deg, #002419 0%, #004C3F 100%)",
+          marginTop: "100pt",
+        }}
+      >
+        <Col lg={12} className="text-center pt-4">
+          <h2 className="mt-3 font-500">Want the latest news and offers?</h2>
+        </Col>
+        <Col lg={12} className="text-center py-4">
+          <p className="font-300 m-0">
+            Sign-up FREE and subscribe to our latest news, information blogs,
+            offers and discounts.
+          </p>
+          <p className="font-300 m-0">NO CREDIT CARD REQUIRED!</p>
+        </Col>
+        <Col lg={12} className="text-center pb-4">
+          <div
+            id="newsLetterCol"
+            className="mt-3"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div id="newsLetterInput" className="me-5" style={{ width: "30%" }}>
+              <input
+                className="newsletter"
+                placeholder="Email Id"
+                value={NewsLetterEmail}
+                onChange={(e) => setNewsLetterEmail(e.target.value)}
+              />
+            </div>
+
+            <div id="NewsLetterButton">
+              <ButtonLight
+                title={NewsLetterBtnLoader === true ? "true" : "Submit"}
+                setLoader={setNewsLetterBtnLoader}
+                setNewsLetterBtnLoader={setNewsLetterBtnLoader}
+                email={NewsLetterEmail}
+              />
+            </div>
           </div>
-        </div>
+        </Col>
       </Row>
 
       {/*Our Projects*/}
@@ -344,6 +402,7 @@ const HomePage = () => {
       {/*Contact*/}
       <div id="contact-us-section"></div>
       <Container
+        id="ContactUsRow"
         style={{ width: "75%", marginTop: "80pt", marginBottom: "60pt" }}
       >
         <Row className="my-5">
@@ -352,6 +411,11 @@ const HomePage = () => {
               Have a question? <br />
               We are here to help.
             </h2>
+            <p className="contactUsP font-300 pe-5">
+              Mention your email and/or contact number followed by your query in
+              the message box. Our support team will get back to you swiftly
+              with the answers you need!
+            </p>
           </Col>
           <Col lg={6}>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -361,6 +425,7 @@ const HomePage = () => {
                     type="text"
                     placeholder="Name"
                     onChange={(e) => getFormData(e.target.value, "name")}
+                    value={FormData[0].name}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -368,6 +433,7 @@ const HomePage = () => {
                     type="email"
                     placeholder="Email"
                     onChange={(e) => getFormData(e.target.value, "email")}
+                    value={FormData[0].email}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -375,6 +441,7 @@ const HomePage = () => {
                   <PhoneInput
                     country={"us"}
                     onChange={(e) => getFormData(e, "phone_number")}
+                    value={FormData[0].phone_number}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -383,14 +450,19 @@ const HomePage = () => {
                     rows={3}
                     placeholder="Message"
                     onChange={(e) => getFormData(e.target.value, "message")}
+                    value={FormData[0].message}
                   />
                 </Form.Group>
 
-                <div className="text-end mt-4">
+                <div
+                  className="mt-4"
+                  style={{ display: "flex", justifyContent: "flex-end" }}
+                >
                   <SharedButton
-                    title={Loader === true ? "---" : "Submit"}
+                    title={Loader === true ? "true" : "Submit"}
                     data={FormData[0]}
                     setLoader={setLoader}
+                    setFormData={setFormData}
                   />
                 </div>
               </Form>

@@ -8,8 +8,15 @@ html {
 }
 
 :root {
-  --main-color: #008080;
-  --main-bg: #1b1c1e;
+  --main-color: rgba(0, 76, 63, 97%);
+  --main-bg: linear-gradient(
+    90deg,
+    #002419 0%,
+    #00382c 20.31%,
+    #004c3f 50.12%,
+    #003b2e 79.69%,
+    #002419 100%
+  );
 }
 
 .font-200 {
