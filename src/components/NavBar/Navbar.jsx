@@ -24,7 +24,7 @@ const NavbarComponent = () => {
           <img
             src="assets/Digitalytics2.png"
             alt="logo"
-            style={{ height: "70pt" }}
+            style={{ height: "80pt" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

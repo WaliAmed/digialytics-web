@@ -48,29 +48,42 @@ const HomePage = () => {
   return (
     <div className="container-fluied">
       {/*Hero*/}
-      <Row
-        id="hero-section"
-        className="md-container mt-5"
-        style={{ marginBottom: "80pt" }}
-      >
-        <Col sm={12} lg={7} className="hero-left">
-          <h2 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h2>
+      <Container>
+        <Row id="hero-section" style={{ marginBottom: "40pt" }}>
+          <Col sm={12} lg={7} className="hero-left">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%",
+              }}
+            >
+              <h2 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h2>
 
-          <p style={{ width: "100%", marginBottom: "25pt" }}>
-            Providing customers all around the globe with the best computer
-            software solutions. Developing algorithms and methodologies for your
-            problems using advanced software techniques, like Artificial
-            Intelligence and Machine Learning, to improve the efficiency and
-            quality of your product.
-          </p>
+              <p style={{ width: "100%", marginBottom: "25pt" }}>
+                Providing customers all around the globe with the best computer
+                software solutions. Developing algorithms and methodologies for
+                your problems using advanced software techniques, like
+                Artificial Intelligence and Machine Learning, to improve the
+                efficiency and quality of your product.
+              </p>
 
-          <SharedButton title="SUBSCRIBE" />
-        </Col>
+              <div>
+                <SharedButton title="SUBSCRIBE" />
+              </div>
+            </div>
+          </Col>
 
-        <Col sm={12} lg={5} className="hero-right">
-          <img src="assets/Laptop.png" alt="img" style={{ height: "270pt" }} />
-        </Col>
-      </Row>
+          <Col sm={12} lg={5} className="hero-right">
+            <img
+              src="assets/Laptop.png"
+              alt="img"
+              style={{ height: "290pt" }}
+            />
+          </Col>
+        </Row>
+      </Container>
 
       {/*About Us*/}
       <Row
@@ -78,7 +91,7 @@ const HomePage = () => {
         style={{ background: "var(--main-bg)" }}
       >
         <Col lg={12} className="text-center py-4">
-          <h2 className="font-300">About Us</h2>
+          <h2 className="font-300">ABOUT US</h2>
           <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
         </Col>
         <Col lg={12} className="text-center pb-4">
@@ -105,68 +118,6 @@ const HomePage = () => {
         </Col>
       </Row>
 
-      {/* About Us
-      <Row className="mt-5 md-container">
-        <Col className="about-us-section text-center p-5">
-          <h2 className="font-300">About Us</h2>
-          <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
-
-          <Row className="mt-5">
-            <Col id="aboutUsCol" sm="auto" lg={6}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "end",
-                }}
-              >
-                <p
-                  className="text-start pt-5"
-                  style={{
-                    width: "70%",
-                  }}
-                >
-                  You imagine it, We will build it. This is our motto. Our best
-                  quality is our work ethic, here at Digitalytics.in We provide
-                  the best service with utmost transparency and honesty. Our
-                  goal is to make sure our clients have no complaints regarding
-                  our work.
-                </p>
-              </div>
-            </Col>
-
-            <Col sm="auto" lg={6} className="text-start">
-              <img
-                id="aboutUsImg"
-                className="about-us-img"
-                src="assets/img.png"
-                alt="img"
-                style={{ height: "300px" }}
-              />
-            </Col>
-          </Row>
-        </Col>
-      </Row> */}
-
-      {/*Separator*/}
-      {/* <Row className="my-5">
-        <div
-          className="text-center py-5"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: "var(--main-bg)",
-          }}
-        >
-          <div style={{ width: "75%" }}>
-            <p className="text-white">
-              We can solve problems which cannot be solved via traditional
-              software development. We can integrate AI and ML to your programs
-              to improve the efficiency and quality of your product.
-            </p>
-          </div>
-        </div>
-      </Row> */}
-
       {/*WHY HIRE US?*/}
       <div id="our-solution-section" className="my-5 py-5">
         <Row className="mb-3">
@@ -178,7 +129,6 @@ const HomePage = () => {
           <Row id="ourSolutionRow" style={{ width: "70%" }}>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
-                bg-color="#F8F9FA"
                 img={"assets/img1.png"}
                 title="Build and Operate a Cloud Native Platform"
                 desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
@@ -186,7 +136,6 @@ const HomePage = () => {
             </Col>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
-                bg-color="rgba(0, 128, 128, 0.1)"
                 img={"assets/img2.png"}
                 title="Increase your business"
                 desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
@@ -194,7 +143,6 @@ const HomePage = () => {
             </Col>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
-                bg-color="#F8F9FA"
                 img={"assets/img3.png"}
                 title="Secure the Hybrid Workforce"
                 desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
@@ -248,14 +196,6 @@ const HomePage = () => {
             </Col>
           </Row>
         </div>
-
-        <Row>
-          <div className="text-center mt-5">
-            <a href="/" className="link-text">
-              <small>Learn More</small>
-            </a>
-          </div>
-        </Row>
       </Row>
 
       {/*News Letter*/}
@@ -322,18 +262,16 @@ const HomePage = () => {
             </div>
           </div>
         </Row>
-
-        <Row>
-          <div className="text-center mt-4">
-            <a href="/" className="link-text">
-              <small>Learn More</small>
-            </a>
-          </div>
-        </Row>
       </Row>
 
       {/*Our Top Stories*/}
-      <div className="container-fluied main-bg" style={{ padding: "60pt 0pt" }}>
+      <div
+        className="container-fluied"
+        style={{
+          padding: "60pt 0pt",
+          background: "linear-gradient(180deg, #002419 0%, #004C3F 100%)",
+        }}
+      >
         <Container style={{ width: "75%" }}>
           <Row>
             <Col id="ourTopStoriesCol" lg={10} sm={12} className="mb-5">

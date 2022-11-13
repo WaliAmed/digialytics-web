@@ -1,6 +1,6 @@
 .shared-btn {
-  background-color: var(--main-color) !important;
-  border: 1px solid var(--main-color) !important;
+  background: var(--main-color) !important;
+  border: 1px solid var(--main-color-2) !important;
   border-radius: 50pt !important;
   font-size: 14px !important;
   padding-left: 20pt !important;
@@ -10,8 +10,8 @@
 }
 
 .shared-btn:hover {
-  background-color: transparent !important;
-  color: var(--main-color) !important;
+  background: transparent !important;
+  color: var(--main-color-2) !important;
 }
 
 .shared-btn:focus {
@@ -21,16 +21,17 @@
 .ApiButton {
   width: 90pt !important;
   border-radius: 50px !important;
-  background-color: var(--main-color) !important;
+  background: var(--main-color) !important;
   padding-top: 5pt !important;
   padding-bottom: 5pt !important;
   display: flex !important;
   justify-content: center !important;
   font-size: 14px !important;
+  border: 1px solid var(--main-color-2) !important;
 }
 
 .ApiButton:hover {
-  background-color: transparent !important;
+  background: transparent !important;
   color: var(--main-color) !important;
 }
 
@@ -41,18 +42,18 @@
 .ApiButtonLight {
   width: 90pt !important;
   border-radius: 50px !important;
-  background-color: white !important;
+  background: white !important;
   padding-top: 5pt !important;
   padding-bottom: 5pt !important;
   display: flex !important;
   justify-content: center !important;
   font-size: 14px !important;
-  color: var(--main-color) !important;
+  color: var(--main-color-2) !important;
   border: 1px solid white !important;
 }
 
 .ApiButtonLight:hover {
-  background-color: transparent !important;
+  background: transparent !important;
   color: white !important;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .shared-btn-light {
-  background-color: white !important;
+  background: white !important;
   border: 1px solid white !important;
   border-radius: 50pt !important;
   font-size: 14px !important;
@@ -69,11 +70,11 @@
   padding-right: 20pt !important;
   padding-top: 5pt !important;
   padding-bottom: 5pt !important;
-  color: var(--main-color) !important;
+  color: var(--main-color-2) !important;
 }
 
 .shared-btn-light:hover {
-  background-color: transparent !important;
+  background: transparent !important;
   color: white !important;
 }
 
