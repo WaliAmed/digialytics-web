@@ -3,12 +3,15 @@
   padding-bottom: 20pt;
 }
 
-.hr {
-  border: 1px solid white !important;
+#hr {
+  border: 0;
+  border-top: 0.1px solid;
+  opacity: 1 !important;
+  margin-top: 16px !important;
 }
 
 .footer-icon {
-  margin-left: 20pt;
+  margin-right: 10pt;
   color: white;
 }
 

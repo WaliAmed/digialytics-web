@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
+import "../../Css/style.css";
 
 const NavbarComponent = () => {
   let navigate = useNavigate();
@@ -18,13 +19,18 @@ const NavbarComponent = () => {
   };
 
   return (
-    <Navbar className="navBar" expand="lg" style={{ paddingBottom: "20pt" }}>
+    <Navbar
+      className="navBar"
+      expand="lg"
+      style={{ paddingBottom: "20pt", paddingTop: "20pt" }}
+    >
       <Container fluid="md" id="navnav">
         <Navbar.Brand href="/">
           <img
+            id="WebLogo"
             src="assets/Digitalytics2.png"
             alt="logo"
-            style={{ height: "80pt" }}
+            style={{ height: "30pt" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

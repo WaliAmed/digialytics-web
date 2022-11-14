@@ -13,7 +13,13 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="container-fluied main-bg Footer px-4 text-white">
+    <div
+      className="container-fluied Footer pb-4 text-white"
+      style={{
+        paddingTop: "60pt",
+        background: "linear-gradient(180deg, #0A2920 0%, #004C3F 100%)",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -23,18 +29,26 @@ const Footer = () => {
       >
         <div
           style={{
-            width: "75%",
+            width: "95%",
           }}
         >
           <div>
             <Row>
-              <Col id="footerLogoSection" sm="auto" lg={6}>
-                <div>
-                  <h5 className="font-300">Digitalytics</h5>
-                </div>
+              <Col id="footerLogoSection" sm="auto" lg={3}>
+                <img
+                  src="assets/Digitalytics-white.png"
+                  alt="logo"
+                  style={{ height: "20pt" }}
+                />
               </Col>
-              <Col id="footerLogoSection" sm="auto" lg={6}>
-                <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+              <Col id="footerLogoSection" sm="auto" lg={3}>
+                <div>
+                  <small
+                    className="font-200"
+                    style={{ marginRight: "8pt", fontSize: "0.7rem" }}
+                  >
+                    Follow for more:
+                  </small>
                   <a href="/" className="footer-icon">
                     <FaLinkedinIn />
                   </a>
@@ -46,148 +60,76 @@ const Footer = () => {
                   </a>
                 </div>
               </Col>
-            </Row>
 
-            <hr className="hr" />
-          </div>
-
-          <div className="mt-4">
-            <Row>
-              <Col id="footerListSection" sm={12} lg={2}>
+              <Col id="footerLogoSection" sm="auto" lg={3}>
                 <div>
-                  <ul className="footer-ul">
-                    <li className="font-300 mb-4" style={{ color: "white" }}>
-                      Home
-                    </li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                  </ul>
-                </div>
-              </Col>
-              <Col id="footerListSection" sm={12} lg={2}>
-                <div>
-                  <ul className="footer-ul">
-                    <li className="font-300 mb-4" style={{ color: "white" }}>
-                      About Us
-                    </li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                  </ul>
-                </div>
-              </Col>
-              <Col id="footerListSection" sm={12} lg={2}>
-                <div>
-                  <ul className="footer-ul">
-                    <li className="font-300 mb-4" style={{ color: "white" }}>
-                      Our Domain
-                    </li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                  </ul>
+                  <small
+                    className="font-200"
+                    style={{ marginRight: "8pt", fontSize: "0.7rem" }}
+                  >
+                    Contact:
+                  </small>
+                  <a href="/" className="footer-icon">
+                    <FaLinkedinIn />
+                  </a>
+                  <a href="/" className="footer-icon">
+                    <FaInstagram />
+                  </a>
+                  <a href="/" className="footer-icon">
+                    <FaFacebookF />
+                  </a>
                 </div>
               </Col>
 
-              <Col id="footerListSection" sm={12} lg={2}>
-                <div>
-                  <div>
-                    <ul className="footer-ul">
-                      <li className="font-300 mb-4" style={{ color: "white" }}>
-                        Our Projects
-                      </li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-
-              <Col id="footerListSection" sm={12} lg={4}>
-                <div>
-                  <div>
-                    <ul className="footer-ul">
-                      <li className="font-300 mb-4" style={{ color: "white" }}>
-                        Our Solutions
-                      </li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                      <li>Lorem</li>
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-
-            <div className="mt-5">
-              <hr className="hr" />
-            </div>
-          </div>
-
-          <div>
-            <Row>
-              <Col lg={6}>
-                <div id="NewsLetterTitle">
-                  <h5 className="font-300">Signup for our Newsletter</h5>
-                </div>
-              </Col>
-              <Col lg={6}>
-                <div
-                  id="NewsLetterCol"
+              <Col
+                id="footerLogoSection"
+                sm="auto"
+                lg={3}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "row-reverse",
+                }}
+              >
+                <p
+                  className="font-200 m-0"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
+                    color: "white",
+                    fontSize: "0.7rem",
+                    marginRight: "10pt",
                   }}
+                  href="/"
                 >
-                  <div className="me-5" style={{ width: "100%" }}>
-                    <input className="newsletter" placeholder="Email Id" />
-                  </div>
+                  Terms & Conditions
+                </p>
 
-                  <div>
-                    <ButtonLight title="Submit" />
-                  </div>
-                </div>
+                <p
+                  className="font-200 m-0"
+                  style={{
+                    color: "white",
+                    fontSize: "0.7rem",
+                  }}
+                  href="/"
+                >
+                  Privacy Policy
+                </p>
               </Col>
             </Row>
 
-            <hr className="hr" />
+            <hr id="hr" />
           </div>
 
           <div>
             <Row>
               <Col sm="auto" lg={12}>
-                <div
-                  id="PrivacyConditions"
-                  style={{ display: "flex", alignItems: "center" }}
-                >
-                  <a
-                    className="link-text font-200"
-                    style={{ color: "grey", fontSize: "0.7rem" }}
+                <div id="PrivacyConditions" className="text-center">
+                  <small
+                    className="font-200 ms-4"
+                    style={{ color: "white", fontSize: "0.5rem" }}
                     href="/"
                   >
-                    Privacy Policy
-                  </a>
-
-                  <a
-                    className="link-text font-200 ms-4"
-                    style={{ color: "grey", fontSize: "0.7rem" }}
-                    href="/"
-                  >
-                    Terms & Conditions
-                  </a>
+                    Copyright © 2021 Digitalytics - All Rights Reserved
+                  </small>
                 </div>
               </Col>
             </Row>

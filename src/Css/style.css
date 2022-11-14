@@ -79,11 +79,6 @@
   padding-bottom: 20pt;
 }
 
-.card-wrapper:hover {
-  background-color: rgba(0, 128, 128, 0.1) !important;
-  cursor: pointer;
-}
-
 .navBar .animated-border {
   position: relative;
 }
@@ -227,5 +222,8 @@
   }
   #NewsLetterButton button {
     width: 67% !important;
+  }
+  #WebLogo {
+    height: 22pt !important;
   }
 }

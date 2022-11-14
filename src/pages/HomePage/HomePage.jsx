@@ -61,7 +61,7 @@ const HomePage = () => {
             >
               <h2 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h2>
 
-              <p style={{ width: "100%", marginBottom: "25pt" }}>
+              <p style={{ width: "100%", marginTop: "22px" }}>
                 Providing customers all around the globe with the best computer
                 software solutions. Developing algorithms and methodologies for
                 your problems using advanced software techniques, like
@@ -87,11 +87,18 @@ const HomePage = () => {
 
       {/*About Us*/}
       <Row
-        className="my-5 py-5 text-white"
-        style={{ background: "var(--main-bg)" }}
+        className="text-white"
+        style={{
+          background: "var(--main-bg)",
+          marginBottom: "90pt",
+          paddingTop: "70px",
+          paddingBottom: "100px",
+        }}
       >
         <Col lg={12} className="text-center py-4">
-          <h2 className="font-300">ABOUT US</h2>
+          <h2 className="font-300" style={{ marginBottom: "50pt" }}>
+            ABOUT US
+          </h2>
           <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
         </Col>
         <Col lg={12} className="text-center pb-4">
@@ -118,43 +125,13 @@ const HomePage = () => {
         </Col>
       </Row>
 
-      {/*WHY HIRE US?*/}
-      <div id="our-solution-section" className="my-5 py-5">
-        <Row className="mb-3">
-          <Col className="text-center mb-3">
-            <h2 className="font-300">WHY HIRE US?</h2>
-          </Col>
-        </Row>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Row id="ourSolutionRow" style={{ width: "70%" }}>
-            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
-              <TransparentCard
-                img={"assets/img1.png"}
-                title="Build and Operate a Cloud Native Platform"
-                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-              />
-            </Col>
-            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
-              <TransparentCard
-                img={"assets/img2.png"}
-                title="Increase your business"
-                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-              />
-            </Col>
-            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
-              <TransparentCard
-                img={"assets/img3.png"}
-                title="Secure the Hybrid Workforce"
-                desc="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-              />
-            </Col>
-          </Row>
-        </div>
-      </div>
-
       {/*WHAT WE DO*/}
-      <Row id="our-domain-section" className="mt-5 md-container">
-        <Col className="text-center mb-5">
+      <Row
+        id="our-domain-section"
+        className="md-container"
+        style={{ marginBottom: "60pt" }}
+      >
+        <Col className="text-center" style={{ marginBottom: "25pt" }}>
           <h2 className="font-300">WHAT WE DO</h2>
         </Col>
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -165,10 +142,9 @@ const HomePage = () => {
               </Row>
               <h5 className="font-400">Research</h5>
               <p className="px-5" id="ourDomainDesc">
-                Our team analyses the problem, looks for the best possible
-                solution and then implements it. If there is no solution
-                available, our team has the capability to innovate new solutions
-                tailor-made to clients’ requirements.
+                Our team analyzes the problem, devises and compares different
+                possible solutions, derives the best possible one, and then
+                optimally implements it.
               </p>
             </Col>
             <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
@@ -177,10 +153,9 @@ const HomePage = () => {
               </Row>
               <h5 className="font-400">Software Development</h5>
               <p className="px-5" id="ourDomainDesc">
-                We provide B2B products to our clients. We can provide Web
-                Applications, Android and IOS Applications as per requirement.
-                We have a team of software developers who can take any task
-                head-on.
+                Our team of software developers provide B2B products to our
+                clients. We provide Web applications, Android and iOS
+                applications as per requirement.
               </p>
             </Col>
             <Col lg={4} sm={"auto"} className="text-center">
@@ -189,14 +164,52 @@ const HomePage = () => {
               </Row>
               <h5 className="font-400">Automation</h5>
               <p className="px-5" id="ourDomainDesc">
-                If you have an existing system that needs automation or you want
-                to integrate Machine Learning to your program, we can help you
-                build such a solution.
+                If you have an existing system that needs automation, or whether
+                you want to integrate Machine Learning to your program, we can
+                help you do both.
               </p>
             </Col>
           </Row>
         </div>
       </Row>
+
+      {/*WHY HIRE US?*/}
+      <div
+        id="our-solution-section"
+        className="py-5"
+        style={{ marginBottom: "25pt" }}
+      >
+        <Row className="mb-3">
+          <Col className="text-center mb-3">
+            <h2 className="font-300">WHY HIRE US?</h2>
+          </Col>
+        </Row>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Row id="ourSolutionRow" style={{ width: "70%" }}>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
+              <TransparentCard
+                img={"assets/img1.png"}
+                title="Better user experience"
+                desc="It’s all hands on deck to improve our clients’ experience with our exellence and skillset. Our solutions are user-centered, our main goal is to make you happy."
+              />
+            </Col>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
+              <TransparentCard
+                img={"assets/img2.png"}
+                title="Increase your business"
+                desc="We add tangible value to your business. Automation and using Machine learning can increase your profits and generate revenue upto 10 times your current value."
+              />
+            </Col>
+            <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
+              <TransparentCard
+                img={"assets/img3.png"}
+                title="Work ethic"
+                desc="We provide the best service with utmost security, privacy and transparency. Our goal is to make sure our clients have a complaint-free, trustworthy experience."
+              />
+            </Col>
+          </Row>
+        </div>
+      </div>
 
       {/*News Letter*/}
       <Row
@@ -204,7 +217,7 @@ const HomePage = () => {
         style={{
           // borderRadius: "0 0 50%/100px 100px",
           background: "linear-gradient(360deg, #002419 0%, #004C3F 100%)",
-          marginTop: "100pt",
+          marginBottom: "60pt",
         }}
       >
         <Col lg={12} className="text-center pt-4">
@@ -250,8 +263,8 @@ const HomePage = () => {
 
       {/*Our Projects*/}
       <div id="our-projects-section"></div>
-      <Row className="my-5 py-5">
-        <Col className="text-center mb-3">
+      <Row className="py-5" style={{ marginBottom: "90pt" }}>
+        <Col className="text-center" style={{ marginBottom: "25pt" }}>
           <h2 className="font-300">Our Projects</h2>
         </Col>
 
@@ -270,6 +283,7 @@ const HomePage = () => {
         style={{
           padding: "60pt 0pt",
           background: "linear-gradient(180deg, #002419 0%, #004C3F 100%)",
+          marginBottom: "90pt",
         }}
       >
         <Container style={{ width: "75%" }}>
@@ -341,70 +355,68 @@ const HomePage = () => {
       <div id="contact-us-section"></div>
       <Container
         id="ContactUsRow"
-        style={{ width: "75%", marginTop: "80pt", marginBottom: "60pt" }}
+        style={{ width: "75%", marginTop: "80pt", marginBottom: "90pt" }}
       >
         <Row className="my-5">
-          <Col id="FormText" sm={12} lg={6}>
+          <Col id="FormText" sm={12} lg={7}>
             <h2 className="font-300">
               Have a question? <br />
               We are here to help.
             </h2>
-            <p className="contactUsP font-300 pe-5">
+            <p className="contactUsP font-300">
               Mention your email and/or contact number followed by your query in
               the message box. Our support team will get back to you swiftly
               with the answers you need!
             </p>
           </Col>
-          <Col lg={6}>
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Form style={{ width: "100%" }}>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    type="text"
-                    placeholder="Name"
-                    onChange={(e) => getFormData(e.target.value, "name")}
-                    value={FormData[0].name}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    type="email"
-                    placeholder="Email"
-                    onChange={(e) => getFormData(e.target.value, "email")}
-                    value={FormData[0].email}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  {/* <Form.Control type="number" placeholder="Phone" /> */}
-                  <PhoneInput
-                    country={"us"}
-                    onChange={(e) => getFormData(e, "phone_number")}
-                    value={FormData[0].phone_number}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    placeholder="Message"
-                    onChange={(e) => getFormData(e.target.value, "message")}
-                    value={FormData[0].message}
-                  />
-                </Form.Group>
+          <Col lg={5} style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Form style={{ width: "90%" }}>
+              <Form.Group className="mb-3">
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
+                  onChange={(e) => getFormData(e.target.value, "name")}
+                  value={FormData[0].name}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control
+                  type="email"
+                  placeholder="Email"
+                  onChange={(e) => getFormData(e.target.value, "email")}
+                  value={FormData[0].email}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                {/* <Form.Control type="number" placeholder="Phone" /> */}
+                <PhoneInput
+                  country={"us"}
+                  onChange={(e) => getFormData(e, "phone_number")}
+                  value={FormData[0].phone_number}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Message"
+                  onChange={(e) => getFormData(e.target.value, "message")}
+                  value={FormData[0].message}
+                />
+              </Form.Group>
 
-                <div
-                  className="mt-4"
-                  style={{ display: "flex", justifyContent: "flex-end" }}
-                >
-                  <SharedButton
-                    title={Loader === true ? "true" : "Submit"}
-                    data={FormData[0]}
-                    setLoader={setLoader}
-                    setFormData={setFormData}
-                  />
-                </div>
-              </Form>
-            </div>
+              <div
+                className="mt-4"
+                style={{ display: "flex", justifyContent: "flex-end" }}
+              >
+                <SharedButton
+                  title={Loader === true ? "true" : "Submit"}
+                  data={FormData[0]}
+                  setLoader={setLoader}
+                  setFormData={setFormData}
+                />
+              </div>
+            </Form>
           </Col>
         </Row>
       </Container>
