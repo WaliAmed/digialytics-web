@@ -41,8 +41,8 @@ const NavbarComponent = () => {
             </Nav.Link> */}
             <Nav.Link
               className="animated-border"
-              href="#our-domain-section"
-              // href="/our-domain"
+              // href="#our-domain-section"
+              href="/our-domain"
             >
               Our Domain
             </Nav.Link>

@@ -9,12 +9,19 @@ import "./footer.css";
 import ButtonLight from "../Button/ButtonLight";
 
 //Icons
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
+import { FiMail, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   return (
     <div
-      className="container-fluied Footer pb-4 text-white"
+      id="Footer"
+      className="container-fluied  pb-4 text-white"
       style={{
         paddingTop: "60pt",
         background: "linear-gradient(180deg, #0A2920 0%, #004C3F 100%)",
@@ -29,19 +36,26 @@ const Footer = () => {
       >
         <div
           style={{
-            width: "95%",
+            width: "90%",
           }}
         >
           <div>
             <Row>
               <Col id="footerLogoSection" sm="auto" lg={3}>
                 <img
+                  id="FooterLogo"
                   src="assets/Digitalytics-white.png"
                   alt="logo"
                   style={{ height: "20pt" }}
                 />
               </Col>
-              <Col id="footerLogoSection" sm="auto" lg={3}>
+
+              <Col
+                id="footerCol"
+                sm={12}
+                lg={3}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <div>
                   <small
                     className="font-200"
@@ -50,18 +64,26 @@ const Footer = () => {
                     Follow for more:
                   </small>
                   <a href="/" className="footer-icon">
-                    <FaLinkedinIn />
+                    <FaLinkedin size={20} />
                   </a>
                   <a href="/" className="footer-icon">
-                    <FaInstagram />
+                    <FaInstagram size={20} />
                   </a>
                   <a href="/" className="footer-icon">
-                    <FaFacebookF />
+                    <FaFacebookSquare size={20} />
+                  </a>
+                  <a href="/" className="footer-icon m-0">
+                    <FaTwitterSquare size={20} />
                   </a>
                 </div>
               </Col>
 
-              <Col id="footerLogoSection" sm="auto" lg={3}>
+              <Col
+                id="footerCol"
+                sm="auto"
+                lg={3}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <div>
                   <small
                     className="font-200"
@@ -70,13 +92,10 @@ const Footer = () => {
                     Contact:
                   </small>
                   <a href="/" className="footer-icon">
-                    <FaLinkedinIn />
+                    <FiPhone size={20} />
                   </a>
                   <a href="/" className="footer-icon">
-                    <FaInstagram />
-                  </a>
-                  <a href="/" className="footer-icon">
-                    <FaFacebookF />
+                    <FiMail size={20} />
                   </a>
                 </div>
               </Col>
@@ -96,7 +115,7 @@ const Footer = () => {
                   style={{
                     color: "white",
                     fontSize: "0.7rem",
-                    marginRight: "10pt",
+                    paddingLeft: "10pt",
                   }}
                   href="/"
                 >

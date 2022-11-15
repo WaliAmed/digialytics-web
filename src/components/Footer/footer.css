@@ -1,4 +1,4 @@
-.Footer {
+#Footer {
   padding-top: 25pt;
   padding-bottom: 20pt;
 }
@@ -11,7 +11,7 @@
 }
 
 .footer-icon {
-  margin-right: 10pt;
+  margin-right: 6pt;
   color: white;
 }
 
@@ -40,6 +40,13 @@
 }
 
 @media (max-width: 480px) {
+  #Footer {
+    padding-top: 30pt !important;
+    padding-bottom: 16px !important;
+  }
+  #FooterLogo {
+    height: 25pt !important;
+  }
   #footerLogoSection {
     display: flex !important;
     justify-content: center !important;
@@ -75,5 +82,18 @@
   }
   #PrivacyConditions {
     justify-content: center !important;
+  }
+  .footer-icon {
+    margin-right: 5pt !important;
+  }
+  #footerLogoSection div {
+    width: 100% !important;
+  }
+  #footerCol {
+    margin-bottom: 8pt !important;
+  }
+  #hr {
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
   }
 }

@@ -107,6 +107,19 @@
   height: 37px !important;
 }
 
+.domain-list {
+  list-style: none;
+  padding-left: 5pt;
+}
+
+.domain-list li {
+  margin-bottom: 6pt;
+}
+
+.tick-icon {
+  margin-right: 15pt !important;
+}
+
 @media (max-width: 480px) {
   .md-container {
     padding: 0pt 20pt 0pt 20pt;
@@ -225,5 +238,42 @@
   }
   #WebLogo {
     height: 22pt !important;
+  }
+  .d1Image {
+    height: 150pt !important;
+  }
+  .d2Image {
+    height: 140pt !important;
+  }
+  .d3Image {
+    height: 130pt !important;
+  }
+  .d4Image {
+    height: 130pt !important;
+  }
+  #OurDomainContainer {
+    text-align: center;
+  }
+  #ourDomainRow {
+    padding-left: 15pt !important;
+    padding-right: 15pt !important;
+  }
+  .domain-desc {
+    padding-right: 0px !important;
+  }
+  .domain-list {
+    text-align: left !important;
+  }
+  #DomainImage {
+    display: block !important;
+  }
+  .domain-list {
+    padding-left: 0px !important;
+  }
+  #ourDomainRow {
+    margin-bottom: 60pt !important;
+  }
+  .retail-icon {
+    margin-left: 0px !important;
   }
 }
