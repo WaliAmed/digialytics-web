@@ -48,17 +48,17 @@ const NavbarComponent = () => {
             </Nav.Link>
             <Nav.Link
               className="animated-border"
+              // href="#our-solution-section"
+              href="/our-solutions"
+            >
+              Our Solutions
+            </Nav.Link>
+            <Nav.Link
+              className="animated-border"
               href="#our-projects-section"
               // href="/our-projects"
             >
               Our Projects
-            </Nav.Link>
-            <Nav.Link
-              className="animated-border"
-              href="#our-solution-section"
-              // href="/our-projects"
-            >
-              Our Solutions
             </Nav.Link>
             {/* <NavDropdown
               onClick={() => navigate("our-solutions")}
@@ -110,7 +110,6 @@ const NavbarComponent = () => {
                 Mobile App&amp; Web Development
               </NavDropdown.Item>
             </NavDropdown> */}
-
             <Nav.Link className="nav-bar-contactus" href="#contact-us-section">
               Contact Us
             </Nav.Link>

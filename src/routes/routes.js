@@ -19,6 +19,7 @@ import OurProjects from "../pages/OurProjects/OurProjects";
 //Components
 import Navbar from "../components/NavBar/Navbar";
 import Footer from "../components/Footer/Footer";
+import WhiteBGFooter from "../components/Footer/WhiteBGFooter";
 
 //Package
 import { ToastContainer, toast } from "react-toastify";
@@ -66,7 +67,8 @@ const RoutesPage = () => {
       </Routes>
 
       {/*Footer*/}
-      <Footer />
+      {window.location.pathname !== "/our-solutions" && <Footer />}
+      {window.location.pathname === "/our-solutions" && <WhiteBGFooter />}
     </Router>
   );
 };
