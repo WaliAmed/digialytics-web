@@ -60,6 +60,13 @@ const NavbarComponent = () => {
             >
               Our Projects
             </Nav.Link>
+            <Nav.Link
+              className="animated-border"
+              // href="#our-projects-section"
+              href="/blog"
+            >
+              Blog
+            </Nav.Link>
             {/* <NavDropdown
               onClick={() => navigate("our-solutions")}
               show={show}

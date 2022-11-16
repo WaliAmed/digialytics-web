@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 //Pages
 import HomePage from "../pages/HomePage/HomePage";
-import AboutUs from "../pages/AboutUs/AboutUs";
+import Blog from "../pages/Blog/Blog";
 import OurDomain from "../pages/OurDomain/OurDomain";
 import OurSolutionsOutLet from "../pages/OurSolutions/OurSolutionsOutLet";
 import OurSolutions from "../pages/OurSolutions/OurSolutions";
@@ -48,7 +48,7 @@ const RoutesPage = () => {
       {/*Routes*/}
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="about-us" exact element={<AboutUs />} />
+        <Route path="blog" exact element={<Blog />} />
         <Route path="our-domain" exact element={<OurDomain />} />
         <Route path="our-projects" exact element={<OurProjects />} />
         <Route path="our-solutions" element={<OurSolutionsOutLet />}>
