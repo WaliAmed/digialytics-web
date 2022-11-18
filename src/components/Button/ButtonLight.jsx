@@ -4,19 +4,32 @@ import "./button.css";
 import FormApi from "../../Api/FormApi";
 import { ThreeDots } from "react-loader-spinner";
 import NewsLetterApi from "../../Api/NewsLetterApi";
+import { toast } from "react-toastify";
 
 const SharedButtonLight = (props) => {
   const [ButtonHover, setButtonHover] = useState(false);
+  var filter =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
   if (props.setLoader) {
     return (
       <Button
         onClick={() => {
           props.setLoader(true);
-          NewsLetterApi(
-            props.email,
-            props.setLoader,
-            props.setNewsLetterBtnLoader
-          );
+          if (props.email === "") {
+            toast.error("Please enter your email address.");
+            props.setLoader(false);
+          } else if (!filter.test(props.email)) {
+            toast.error("Please enter a valid email address.");
+            props.setLoader(false);
+          } else {
+            NewsLetterApi(
+              props.email,
+              props.setLoader,
+              props.setNewsLetterBtnLoader,
+              props.setNewsLetterEmail
+            );
+          }
         }}
         className="ApiButtonLight"
         onMouseEnter={() => setButtonHover(true)}

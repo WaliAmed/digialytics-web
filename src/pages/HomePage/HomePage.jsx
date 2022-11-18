@@ -251,6 +251,7 @@ const HomePage = () => {
                 setLoader={setNewsLetterBtnLoader}
                 setNewsLetterBtnLoader={setNewsLetterBtnLoader}
                 email={NewsLetterEmail}
+                setNewsLetterEmail={setNewsLetterEmail}
               />
             </div>
           </div>

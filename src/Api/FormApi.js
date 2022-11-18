@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-const FormApi = (data, setLoader, setFormData) => {
+const FormApi = (data, setLoader, setFormData, getError) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -29,6 +29,7 @@ const FormApi = (data, setLoader, setFormData) => {
       } else if (result) {
         toast.success("Message sent successfully!");
         setLoader(false);
+        getError([{ field: "", message: "" }]);
         setFormData([
           {
             name: "",

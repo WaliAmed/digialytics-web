@@ -1,6 +1,11 @@
 import { toast } from "react-toastify";
 
-const NewsLetterApi = (email, setLoader, setNewsLetterBtnLoader) => {
+const NewsLetterApi = (
+  email,
+  setLoader,
+  setNewsLetterBtnLoader,
+  setNewsLetterEmail
+) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -27,6 +32,7 @@ const NewsLetterApi = (email, setLoader, setNewsLetterBtnLoader) => {
         toast.success("Subscribed successfully!");
         setLoader(false);
         setNewsLetterBtnLoader("");
+        setNewsLetterEmail("");
       }
     })
     .catch((error) => console.log("error", error));

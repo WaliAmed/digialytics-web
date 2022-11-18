@@ -14,6 +14,16 @@ import "react-phone-input-2/lib/style.css";
 import SharedButton from "../../components/Button/Button";
 
 const ContactUsSection = () => {
+  const [error, setError] = useState([{ field: "", message: "" }]);
+  const getError = (field, message) => {
+    console.log(field, message);
+    let errorMessage = [...error];
+    errorMessage[0].field = field;
+    errorMessage[0].message = message;
+
+    setError(errorMessage);
+  };
+
   const getFormData = (text, field) => {
     let DataArray = [...FormData];
     DataArray[0][field] = text;
@@ -57,6 +67,9 @@ const ContactUsSection = () => {
                 onChange={(e) => getFormData(e.target.value, "name")}
                 value={FormData[0].name}
               />
+              <small style={{ color: "red" }}>
+                {error[0].field === "name" ? error[0].message : ""}
+              </small>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Control
@@ -65,6 +78,9 @@ const ContactUsSection = () => {
                 onChange={(e) => getFormData(e.target.value, "email")}
                 value={FormData[0].email}
               />
+              <small style={{ color: "red" }}>
+                {error[0].field === "email" && error[0].message}
+              </small>
             </Form.Group>
             <Form.Group className="mb-3">
               {/* <Form.Control type="number" placeholder="Phone" /> */}
@@ -73,6 +89,9 @@ const ContactUsSection = () => {
                 onChange={(e) => getFormData(e, "phone_number")}
                 value={FormData[0].phone_number}
               />
+              <small style={{ color: "red" }}>
+                {error[0].field === "phone_number" && error[0].message}
+              </small>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Control
@@ -82,6 +101,9 @@ const ContactUsSection = () => {
                 onChange={(e) => getFormData(e.target.value, "message")}
                 value={FormData[0].message}
               />
+              <small style={{ color: "red" }}>
+                {error[0].field === "message" && error[0].message}
+              </small>
             </Form.Group>
 
             <div
@@ -93,6 +115,7 @@ const ContactUsSection = () => {
                 data={FormData[0]}
                 setLoader={setLoader}
                 setFormData={setFormData}
+                getError={getError}
               />
             </div>
           </Form>
