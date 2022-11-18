@@ -42,19 +42,26 @@
 .ApiButtonLight {
   width: 90pt !important;
   border-radius: 50px !important;
-  background: white !important;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f6f6f6 27.6%,
+    #e5e5e5 62.5%,
+    #bbbbbb 100%
+  ) !important;
   padding-top: 5pt !important;
   padding-bottom: 5pt !important;
   display: flex !important;
   justify-content: center !important;
   font-size: 14px !important;
   color: var(--main-color-2) !important;
-  border: 1px solid white !important;
+  border: 1px solid var(--main-color-2) !important;
 }
 
 .ApiButtonLight:hover {
   background: transparent !important;
   color: white !important;
+  border-color: white !important;
 }
 
 .ApiButtonLight:focus {
@@ -62,20 +69,27 @@
 }
 
 .shared-btn-light {
-  background: white !important;
-  border: 1px solid white !important;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f6f6f6 27.6%,
+    #e5e5e5 62.5%,
+    #bbbbbb 100%
+  ) !important;
   border-radius: 50pt !important;
   font-size: 14px !important;
   padding-left: 20pt !important;
   padding-right: 20pt !important;
   padding-top: 5pt !important;
   padding-bottom: 5pt !important;
+  border: 1px solid var(--main-color-2) !important;
   color: var(--main-color-2) !important;
 }
 
 .shared-btn-light:hover {
   background: transparent !important;
   color: white !important;
+  border-color: white !important;
 }
 
 #bordered-card {

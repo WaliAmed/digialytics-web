@@ -102,6 +102,17 @@
   transform: scaleX(1);
 }
 
+.activeNav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--main-color-2);
+  bottom: 0;
+  left: 0;
+}
+
 .react-tel-input input {
   width: 100% !important;
   height: 37px !important;
@@ -150,7 +161,33 @@
   padding: 3% 44% 3% 4%;
 }
 
+.OurSolutionsPage {
+  padding-top: 80pt;
+}
+
+#Starter {
+  margin-top: 85pt;
+}
+
+.form-control {
+  border-color: var(--main-color-2) !important;
+}
+
 @media (max-width: 480px) {
+  #Starter {
+    margin-top: 100pt;
+  }
+  .aboutus-text {
+    width: 90% !important;
+  }
+  .OurSolutionsPage {
+    padding-top: 40pt !important;
+  }
+
+  .hero-right {
+    margin-top: 20pt !important;
+  }
+
   .md-container {
     padding: 0pt 20pt 0pt 20pt;
   }

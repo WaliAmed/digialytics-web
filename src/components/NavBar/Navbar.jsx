@@ -17,12 +17,19 @@ const NavbarComponent = () => {
   const hideDropdown = (e) => {
     setShow(false);
   };
+  const { host, hostname, href, origin, pathname, port, protocol, search } =
+    window.location;
 
   return (
     <Navbar
+      fixed="top"
       className="navBar"
       expand="lg"
-      style={{ paddingBottom: "20pt", paddingTop: "20pt" }}
+      style={{
+        paddingBottom: "10pt",
+        paddingTop: "35pt",
+        backgroundColor: "rgba(255, 255, 255, 0.877)",
+      }}
     >
       <Container fluid="md" id="navnav">
         <Navbar.Brand href="/">
@@ -40,14 +47,18 @@ const NavbarComponent = () => {
               About Us
             </Nav.Link> */}
             <Nav.Link
-              className="animated-border"
+              className={`animated-border ${
+                pathname === "/our-domain" ? "activeNav" : ""
+              }`}
               // href="#our-domain-section"
               href="/our-domain"
             >
               Our Domain
             </Nav.Link>
             <Nav.Link
-              className="animated-border"
+              className={`animated-border ${
+                pathname === "/our-solutions" ? "activeNav" : ""
+              }`}
               // href="#our-solution-section"
               href="/our-solutions"
             >
@@ -61,7 +72,9 @@ const NavbarComponent = () => {
               Our Projects
             </Nav.Link>
             <Nav.Link
-              className="animated-border"
+              className={`animated-border ${
+                pathname === "/blog" ? "activeNav" : ""
+              }`}
               // href="#our-projects-section"
               href="/blog"
             >
@@ -117,7 +130,12 @@ const NavbarComponent = () => {
                 Mobile App&amp; Web Development
               </NavDropdown.Item>
             </NavDropdown> */}
-            <Nav.Link className="nav-bar-contactus" href="#contact-us-section">
+            <Nav.Link
+              className="nav-bar-contactus"
+              onClick={() => {
+                window.location = "/#contact-us-section";
+              }}
+            >
               Contact Us
             </Nav.Link>
           </Nav>

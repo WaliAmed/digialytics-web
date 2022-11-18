@@ -8,11 +8,12 @@ import RetailIcon from "../../assets/icons/RetailIcon";
 import HealIcon from "../../assets/icons/HealIcon";
 import LawIcon from "../../assets/icons/LawIcon";
 import TickIcon from "../../assets/icons/TickIcon";
+import ContactUsSection from "../../components/ContactUsSection/contactUs";
 
 const OurDomain = () => {
   return (
     <Container id="OurDomainContainer">
-      <Row className="text-center py-5">
+      <Row className="text-center py-5" id="Starter">
         <Col lg={12} sm="auto">
           <h2 className="font-300">OUR DOMAIN</h2>
         </Col>

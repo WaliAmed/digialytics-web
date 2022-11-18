@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
 
 //Packages
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
 //Components
@@ -23,32 +21,27 @@ import Automation from "../../assets/icons/Automation";
 import SharedButtonLight from "../../components/Button/ButtonLight";
 import SharedCard from "../../components/Cards/Card";
 import TransparentCard from "../../components/Cards/TransparentCard";
+import ContactUsSection from "../../components/ContactUsSection/contactUs";
 
 const HomePage = () => {
-  const [Loader, setLoader] = useState(false);
-  const [FormData, setFormData] = useState([
-    {
-      name: "",
-      email: "",
-      phone_number: "",
-      message: "",
-    },
-  ]);
-
-  const getFormData = (text, field) => {
-    let DataArray = [...FormData];
-    DataArray[0][field] = text;
-
-    setFormData(DataArray);
-  };
-
   const [NewsLetterBtnLoader, setNewsLetterBtnLoader] = useState(false);
   const [NewsLetterEmail, setNewsLetterEmail] = useState("");
+
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
+
+  useEffect(() => {
+    var currentUrlWithoutParams = window.location.href.split("?")[0];
+    console.log(currentUrlWithoutParams.includes("#contact-us-section"));
+    if (currentUrlWithoutParams.includes("#contact-us-section")) {
+      executeScroll();
+    }
+  }, []);
 
   return (
     <div className="container-fluied">
       {/*Hero*/}
-      <Container>
+      <Container id="Starter">
         <Row id="hero-section" style={{ marginBottom: "40pt" }}>
           <Col sm={12} lg={7} className="hero-left">
             <div
@@ -59,7 +52,7 @@ const HomePage = () => {
                 height: "100%",
               }}
             >
-              <h2 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h2>
+              <h1 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h1>
 
               <p style={{ width: "100%", marginTop: "22px" }}>
                 Providing customers all around the globe with the best computer
@@ -69,9 +62,9 @@ const HomePage = () => {
                 efficiency and quality of your product.
               </p>
 
-              <div>
+              <a href="#news-letter">
                 <SharedButton title="SUBSCRIBE" />
-              </div>
+              </a>
             </div>
           </Col>
 
@@ -96,10 +89,10 @@ const HomePage = () => {
         }}
       >
         <Col lg={12} className="text-center py-4">
-          <h2 className="font-300" style={{ marginBottom: "50pt" }}>
+          <h3 className="font-300" style={{ marginBottom: "50pt" }}>
             ABOUT US
-          </h2>
-          <h2 className="mt-3 font-500">You Imagine it. We Deliver it.</h2>
+          </h3>
+          <h1 className="mt-3 font-500">You Imagine it. We Deliver it.</h1>
         </Col>
         <Col lg={12} className="text-center pb-4">
           <div
@@ -109,7 +102,7 @@ const HomePage = () => {
             }}
           >
             <p
-              className="font-300"
+              className="font-200 aboutus-text"
               style={{
                 width: "70%",
               }}
@@ -131,17 +124,17 @@ const HomePage = () => {
         className="md-container"
         style={{ marginBottom: "60pt" }}
       >
-        <Col className="text-center" style={{ marginBottom: "25pt" }}>
+        <Col className="text-center" style={{ marginBottom: "32pt" }}>
           <h2 className="font-300">WHAT WE DO</h2>
         </Col>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Row style={{ width: "90%" }}>
+          <Row style={{ width: "100%" }}>
             <Col id="ourDomainCol" lg={4} sm={"auto"} className="text-center">
               <Row className="mb-3">
                 <ResearchIcon />
               </Row>
-              <h5 className="font-400">Research</h5>
-              <p className="px-5" id="ourDomainDesc">
+              <h4 className="font-400">Research</h4>
+              <p className="px-5 font-200" id="ourDomainDesc">
                 Our team analyzes the problem, devises and compares different
                 possible solutions, derives the best possible one, and then
                 optimally implements it.
@@ -151,8 +144,8 @@ const HomePage = () => {
               <Row className="mb-3">
                 <SoftwareDevelopment />
               </Row>
-              <h5 className="font-400">Software Development</h5>
-              <p className="px-5" id="ourDomainDesc">
+              <h4 className="font-400">Software Development</h4>
+              <p className="px-5 font-200" id="ourDomainDesc">
                 Our team of software developers provide B2B products to our
                 clients. We provide Web applications, Android and iOS
                 applications as per requirement.
@@ -162,8 +155,8 @@ const HomePage = () => {
               <Row className="mb-3">
                 <Automation />
               </Row>
-              <h5 className="font-400">Automation</h5>
-              <p className="px-5" id="ourDomainDesc">
+              <h4 className="font-400">Automation</h4>
+              <p className="px-5 font-200" id="ourDomainDesc">
                 If you have an existing system that needs automation, or whether
                 you want to integrate Machine Learning to your program, we can
                 help you do both.
@@ -180,12 +173,14 @@ const HomePage = () => {
         style={{ marginBottom: "25pt" }}
       >
         <Row className="mb-3">
-          <Col className="text-center mb-3">
-            <h2 className="font-300">WHY HIRE US?</h2>
+          <Col className="text-center">
+            <h2 className="font-300" style={{ marginBottom: "32pt" }}>
+              WHY HIRE US?
+            </h2>
           </Col>
         </Row>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Row id="ourSolutionRow" style={{ width: "70%" }}>
+          <Row id="ourSolutionRow" style={{ width: "80%" }}>
             <Col id="ourSolutionCol" className="text-center" lg={4} sm={12}>
               <TransparentCard
                 img={"assets/img1.png"}
@@ -212,6 +207,7 @@ const HomePage = () => {
       </div>
 
       {/*News Letter*/}
+      <div id="news-letter"></div>
       <Row
         className="py-5 text-white"
         style={{
@@ -221,7 +217,7 @@ const HomePage = () => {
         }}
       >
         <Col lg={12} className="text-center pt-4">
-          <h2 className="mt-3 font-500">Want the latest news and offers?</h2>
+          <h1 className="mt-3 font-500">Want the latest news and offers?</h1>
         </Col>
         <Col lg={12} className="text-center py-4">
           <p className="font-300 m-0">
@@ -265,7 +261,7 @@ const HomePage = () => {
       <div id="our-projects-section"></div>
       <Row className="py-5" style={{ marginBottom: "90pt" }}>
         <Col className="text-center" style={{ marginBottom: "25pt" }}>
-          <h2 className="font-300">Our Projects</h2>
+          <h2 className="font-300">OUR PRODUCTS</h2>
         </Col>
 
         <Row>
@@ -274,6 +270,24 @@ const HomePage = () => {
               <ProjectSlider />
             </div>
           </div>
+        </Row>
+
+        <Row className="mt-4">
+          <Col lg={12}>
+            <div className="text-center">
+              <a
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontSize: "14px",
+                  cursor: "pointer",
+                }}
+              >
+                Show more
+              </a>
+            </div>
+          </Col>
         </Row>
       </Row>
 
@@ -289,7 +303,7 @@ const HomePage = () => {
         <Container style={{ width: "75%" }}>
           <Row>
             <Col id="ourTopStoriesCol" lg={10} sm={12} className="mb-5">
-              <h2 className="font-300 text-white">Our top Stories</h2>
+              <h2 className="text-white">Our top Stories</h2>
               <small className="text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
               </small>
@@ -352,74 +366,8 @@ const HomePage = () => {
       </div>
 
       {/*Contact*/}
-      <div id="contact-us-section"></div>
-      <Container
-        id="ContactUsRow"
-        style={{ width: "75%", marginTop: "80pt", marginBottom: "90pt" }}
-      >
-        <Row className="my-5">
-          <Col id="FormText" sm={12} lg={7}>
-            <h2 className="font-300">
-              Have a question? <br />
-              We are here to help.
-            </h2>
-            <p className="contactUsP font-300">
-              Mention your email and/or contact number followed by your query in
-              the message box. Our support team will get back to you swiftly
-              with the answers you need!
-            </p>
-          </Col>
-          <Col lg={5} style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Form style={{ width: "90%" }}>
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="text"
-                  placeholder="Name"
-                  onChange={(e) => getFormData(e.target.value, "name")}
-                  value={FormData[0].name}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="email"
-                  placeholder="Email"
-                  onChange={(e) => getFormData(e.target.value, "email")}
-                  value={FormData[0].email}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                {/* <Form.Control type="number" placeholder="Phone" /> */}
-                <PhoneInput
-                  country={"us"}
-                  onChange={(e) => getFormData(e, "phone_number")}
-                  value={FormData[0].phone_number}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  placeholder="Message"
-                  onChange={(e) => getFormData(e.target.value, "message")}
-                  value={FormData[0].message}
-                />
-              </Form.Group>
-
-              <div
-                className="mt-4"
-                style={{ display: "flex", justifyContent: "flex-end" }}
-              >
-                <SharedButton
-                  title={Loader === true ? "true" : "Submit"}
-                  data={FormData[0]}
-                  setLoader={setLoader}
-                  setFormData={setFormData}
-                />
-              </div>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+      <div id="contact-us-section" ref={myRef}></div>
+      <ContactUsSection />
     </div>
   );
 };
