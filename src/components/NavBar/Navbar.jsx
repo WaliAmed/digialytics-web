@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
 import "../../Css/style.css";
+import Logo from "../../assets/images/Digitalytics2.png";
 
 const NavbarComponent = () => {
   let navigate = useNavigate();
@@ -28,17 +29,12 @@ const NavbarComponent = () => {
       style={{
         paddingBottom: "10pt",
         paddingTop: "35pt",
-        backgroundColor: "rgba(255, 255, 255, 0.877)",
+        backgroundColor: "rgba(255, 255, 255, 1)",
       }}
     >
       <Container fluid="md" id="navnav">
         <Navbar.Brand href="/">
-          <img
-            id="WebLogo"
-            src="assets/Digitalytics2.png"
-            alt="logo"
-            style={{ height: "30pt" }}
-          />
+          <img id="WebLogo" src={Logo} alt="logo" style={{ height: "30pt" }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
@@ -65,11 +61,13 @@ const NavbarComponent = () => {
               Our Solutions
             </Nav.Link>
             <Nav.Link
-              className="animated-border"
-              href="#our-projects-section"
-              // href="/our-projects"
+              className={`animated-border ${
+                pathname === "/our-products" ? "activeNav" : ""
+              }`}
+              // href="#our-projects-section"
+              href="/our-products"
             >
-              Our Projects
+              Our Products
             </Nav.Link>
             <Nav.Link
               className={`animated-border ${

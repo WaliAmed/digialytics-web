@@ -173,10 +173,30 @@
   border-color: var(--main-color-2) !important;
 }
 
+#newsLetterBg {
+  background-image: url("../assets/images/newsLetterBg.png");
+  background-size: cover;
+}
+
+#ourstoriesBg {
+  background-image: url("../assets/images/blogsBg.png");
+  background-size: cover;
+  min-height: 100vh;
+}
+
 @media (max-width: 480px) {
+  #newsLetterBg {
+    background-image: url("../assets/images/newsLetterBgMb.png") !important;
+  }
   #Starter {
     margin-top: 100pt;
   }
+  #ourstoriesBg {
+    background-image: url("../assets/images/blogsBgMb.png");
+    background-size: cover;
+    height: 225vh;
+  }
+
   .aboutus-text {
     width: 90% !important;
   }

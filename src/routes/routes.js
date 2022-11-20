@@ -14,7 +14,8 @@ import DevOps from "../pages/OurSolutions/SubPages/DevOps";
 import AdvancedAnalytics from "../pages/OurSolutions/SubPages/AdvancedAnalytics";
 import MobileWebDevelopment from "../pages/OurSolutions/SubPages/MobileWebDevelopment";
 import ContactUs from "../pages/ContactUs/ContactUs";
-import OurProjects from "../pages/OurProjects/OurProjects";
+import OurProducts from "../pages/OurProducts/OurProducts";
+import OurProductsSpc from "../pages/OurProducts/OurProductsSpc";
 
 //Components
 import Navbar from "../components/NavBar/Navbar";
@@ -50,7 +51,8 @@ const RoutesPage = () => {
         <Route index element={<HomePage />} />
         <Route path="blog" exact element={<Blog />} />
         <Route path="our-domain" exact element={<OurDomain />} />
-        <Route path="our-projects" exact element={<OurProjects />} />
+        <Route path="our-products" exact element={<OurProducts />} />
+        <Route path="our-products/:id" exact element={<OurProductsSpc />} />
         <Route path="our-solutions" element={<OurSolutionsOutLet />}>
           <Route index element={<OurSolutions />} />
           <Route path="natural-language-processing" element={<NLP />} />

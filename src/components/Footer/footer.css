@@ -1,6 +1,13 @@
 #Footer {
-  padding-top: 25pt;
-  padding-bottom: 20pt;
+  padding-top: 140pt;
+  background-image: url("../../assets/images/footerBg.png");
+  background-size: cover;
+}
+
+#FooterWhite {
+  padding-top: 140pt;
+  background-image: url("../../assets/images/footerBgWhite.png");
+  background-size: cover;
 }
 
 #hr {
@@ -41,11 +48,18 @@
 
 @media (max-width: 480px) {
   #Footer {
-    padding-top: 30pt !important;
-    padding-bottom: 16px !important;
+    padding-top: 140pt !important;
+    background-image: url("../../assets/images/footerBgMb.png") !important;
   }
+  #FooterWhite {
+    padding-top: 140pt;
+    background-image: url("../../assets/images/footerBgMbWhite.png");
+    background-size: cover;
+  }
+
   #FooterLogo {
-    height: 25pt !important;
+    height: 30pt !important;
+    margin-bottom: 15pt;
   }
   #footerLogoSection {
     display: flex !important;

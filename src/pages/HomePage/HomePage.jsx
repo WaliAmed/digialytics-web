@@ -209,11 +209,14 @@ const HomePage = () => {
       {/*News Letter*/}
       <div id="news-letter"></div>
       <Row
-        className="py-5 text-white"
+        id="newsLetterBg"
+        className="text-white"
         style={{
           // borderRadius: "0 0 50%/100px 100px",
-          background: "linear-gradient(360deg, #002419 0%, #004C3F 100%)",
+          // background: "linear-gradient(360deg, #002419 0%, #004C3F 100%)",
           marginBottom: "60pt",
+          paddingTop: "70pt",
+          paddingBottom: "30pt",
         }}
       >
         <Col lg={12} className="text-center pt-4">
@@ -294,10 +297,11 @@ const HomePage = () => {
 
       {/*Our Top Stories*/}
       <div
+        id="ourstoriesBg"
         className="container-fluied"
         style={{
           padding: "60pt 0pt",
-          background: "linear-gradient(180deg, #002419 0%, #004C3F 100%)",
+          // background: "linear-gradient(180deg, #002419 0%, #004C3F 100%)",
           marginBottom: "90pt",
         }}
       >

@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import FormApi from "../../Api/FormApi";
 import "./button.css";
 
+import { BsArrowRightShort } from "react-icons/bs";
+
 const SharedButton = (props) => {
   const [ButtonHover, setButtonHover] = useState(false);
   var filter =
@@ -57,7 +59,12 @@ const SharedButton = (props) => {
       </div>
     );
   } else {
-    return <Button className="shared-btn">{props.title}</Button>;
+    return (
+      <Button className="shared-btn">
+        {props.title}{" "}
+        {props.arrow === true ? <BsArrowRightShort size={23} /> : ""}
+      </Button>
+    );
   }
 };
 

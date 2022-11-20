@@ -7,6 +7,7 @@ import "./footer.css";
 
 //Components
 import ButtonLight from "../Button/ButtonLight";
+import Logo from "../../assets/images/Digitalytics2.png";
 
 //Icons
 import {
@@ -20,12 +21,8 @@ import { FiMail, FiPhone } from "react-icons/fi";
 const WhiteFooter = () => {
   return (
     <div
-      id="Footer"
       className="container-fluied  pb-4 text-black"
-      style={{
-        paddingTop: "60pt",
-        background: "white",
-      }}
+      style={{ paddingTop: "50pt" }}
     >
       <div
         style={{
@@ -44,9 +41,9 @@ const WhiteFooter = () => {
               <Col id="footerLogoSection" sm="auto" lg={3}>
                 <img
                   id="FooterLogo"
-                  src="assets/Digitalytics2.png"
+                  src={Logo}
                   alt="logo"
-                  style={{ height: "20pt" }}
+                  style={{ height: "30pt" }}
                 />
               </Col>
 
