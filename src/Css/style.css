@@ -392,6 +392,11 @@
   .SolutionBigCardClass3 {
     height: 300pt !important;
   }
+
+  .ourPrCol {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+  }
 }
 
 @media (max-width: 991px) {

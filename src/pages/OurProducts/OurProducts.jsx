@@ -23,10 +23,10 @@ const OurProducts = () => {
         {/*Personality assessment toolkit*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
-          <Col lg={6} sm={12}>
+          <Col className="ourPrCol" lg={6} sm={12}>
             <div className="mb-3">
               <h2 className="font-500">Personality assessment toolkit</h2>
             </div>
@@ -57,7 +57,7 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/Personalityassessmenttoolkit.png"
-              style={{ height: "220pt" }}
+              style={{ height: "220pt", width: "100%" }}
               alt="d1"
             />
           </Col>
@@ -66,7 +66,7 @@ const OurProducts = () => {
         {/*License plate recognition for vehicles*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
           <Col
@@ -81,13 +81,13 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/licenseplate.png"
-              style={{ height: "200pt" }}
+              style={{ height: "200pt", width: "100%" }}
               alt="d1"
             />
           </Col>
 
           <Col lg={6} sm={12}>
-            <div className="mb-3">
+            <div className="ourPrCol mb-3">
               <h2 className="font-500">
                 License plate recognition for vehicles
               </h2>
@@ -113,10 +113,10 @@ const OurProducts = () => {
         {/*Suggestion Mining*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
-          <Col lg={6} sm={12}>
+          <Col className="ourPrCol" lg={6} sm={12}>
             <div className="mb-3">
               <h2 className="font-500">Suggestion Mining</h2>
             </div>
@@ -148,7 +148,7 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/suggestion.png"
-              style={{ height: "220pt" }}
+              style={{ height: "220pt", width: "100%" }}
               alt="d1"
             />
           </Col>
@@ -157,7 +157,7 @@ const OurProducts = () => {
         {/*False Ratings: Mobile Application Ratings Deciphered*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
           <Col
@@ -172,13 +172,13 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/falserating.png"
-              style={{ height: "200pt" }}
+              style={{ height: "200pt", width: "100%" }}
               alt="d1"
             />
           </Col>
 
           <Col lg={6} sm={12}>
-            <div className="mb-3">
+            <div className="ourPrCol mb-3">
               <h2 className="font-500">
                 False Ratings: Mobile Application Ratings Deciphered
               </h2>
@@ -203,10 +203,10 @@ const OurProducts = () => {
         {/*Online Child Abuse Detection*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
-          <Col lg={6} sm={12}>
+          <Col className="ourPrCol" lg={6} sm={12}>
             <div className="mb-3">
               <h2 className="font-500">Online Child Abuse Detection</h2>
             </div>
@@ -238,7 +238,7 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/childabuse.png"
-              style={{ height: "220pt" }}
+              style={{ height: "220pt", width: "100%" }}
               alt="d1"
             />
           </Col>
@@ -247,7 +247,7 @@ const OurProducts = () => {
         {/*Student Loan Prediction*/}
         <Row
           id="ourDomainRow"
-          className="px-5"
+          className="px-5 our-pr"
           style={{ marginBottom: "150pt" }}
         >
           <Col
@@ -262,13 +262,13 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/studentloan.png"
-              style={{ height: "250pt" }}
+              style={{ height: "250pt", width: "100%" }}
               alt="d1"
             />
           </Col>
 
           <Col lg={6} sm={12}>
-            <div className="mb-3">
+            <div className="ourPrCol mb-3">
               <h2 className="font-500">Student Loan Prediction</h2>
             </div>
             <div className="mb-4 domain-desc" style={{ paddingRight: "20pt" }}>
@@ -294,7 +294,7 @@ const OurProducts = () => {
           className="px-5"
           style={{ marginBottom: "150pt" }}
         >
-          <Col lg={6} sm={12}>
+          <Col className="ourPrCol" lg={6} sm={12}>
             <div className="mb-3">
               <h2 className="font-500">Car Prices Prediction</h2>
             </div>
@@ -326,7 +326,7 @@ const OurProducts = () => {
             <img
               className="d1Image"
               src="assets/car.jpeg"
-              style={{ height: "220pt" }}
+              style={{ height: "220pt", width: "100%" }}
               alt="d1"
             />
           </Col>
