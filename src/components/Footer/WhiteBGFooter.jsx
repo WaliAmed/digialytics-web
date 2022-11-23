@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import "./footer.css";
 
 //Components
-import ButtonLight from "../Button/ButtonLight";
 import Logo from "../../assets/images/Digitalytics2.png";
 
 //Icons

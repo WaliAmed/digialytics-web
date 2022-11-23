@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { ThreeDots } from "react-loader-spinner";
-import { toast } from "react-toastify";
 import FormApi from "../../Api/FormApi";
 import "./button.css";
 

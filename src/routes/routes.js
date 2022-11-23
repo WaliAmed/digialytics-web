@@ -23,7 +23,7 @@ import Footer from "../components/Footer/Footer";
 import WhiteBGFooter from "../components/Footer/WhiteBGFooter";
 
 //Package
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const RoutesPage = () => {

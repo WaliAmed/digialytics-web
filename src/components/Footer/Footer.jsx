@@ -5,9 +5,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./footer.css";
 
-//Components
-import ButtonLight from "../Button/ButtonLight";
-
 //Icons
 import {
   FaFacebookSquare,

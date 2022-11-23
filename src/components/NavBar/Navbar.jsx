@@ -4,22 +4,12 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
 import "../../Css/style.css";
 import Logo from "../../assets/images/Digitalytics2.png";
 
 const NavbarComponent = () => {
-  let navigate = useNavigate();
-  const [show, setShow] = useState(false);
-  const showDropdown = (e) => {
-    setShow(!show);
-  };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
-  const { host, hostname, href, origin, pathname, port, protocol, search } =
-    window.location;
+  const { pathname } = window.location;
 
   return (
     <Navbar
@@ -69,7 +59,7 @@ const NavbarComponent = () => {
             >
               Our Products
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               className={`animated-border ${
                 pathname === "/blog" ? "activeNav" : ""
               }`}
@@ -77,57 +67,7 @@ const NavbarComponent = () => {
               href="/blog"
             >
               Blog
-            </Nav.Link>
-            {/* <NavDropdown
-              onClick={() => navigate("our-solutions")}
-              show={show}
-              onMouseEnter={showDropdown}
-              onMouseLeave={hideDropdown}
-              title="OUR SOLUTIONS"
-              id="basic-nav-dropdown"
-            >
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/natural-language-processing"
-              >
-                NLP (Natural Language Processing)
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/computer-vision"
-              >
-                CV (Computer Vision)
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/forecasting"
-              >
-                Forecasting/ Time Series
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/dev-ops"
-              >
-                Dev Ops
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/advanced-analytics"
-              >
-                BI &amp; Advanced Analytics
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                className="animated-border"
-                href="/our-solutions/mobile-and-web-development"
-              >
-                Mobile App&amp; Web Development
-              </NavDropdown.Item>
-            </NavDropdown> */}
+            </Nav.Link> */}
             <Nav.Link
               className="nav-bar-contactus"
               onClick={() => {

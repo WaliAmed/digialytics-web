@@ -280,7 +280,7 @@ const HomePage = () => {
           <Col lg={12}>
             <div className="text-center">
               <a
-                href="#"
+                href="/our-products"
                 style={{
                   textDecoration: "none",
                   color: "black",
@@ -296,7 +296,7 @@ const HomePage = () => {
       </Row>
 
       {/*Our Top Stories*/}
-      <div
+      {/* <div
         id="ourstoriesBg"
         className="container-fluied"
         style={{
@@ -368,7 +368,7 @@ const HomePage = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
 
       {/*Contact*/}
       <div id="contact-us-section" ref={myRef}></div>
