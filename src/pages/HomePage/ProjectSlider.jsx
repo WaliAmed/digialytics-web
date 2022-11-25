@@ -4,6 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "react-responsive";
 
+//image
+import toolkit from "../../assets/images/image1.png";
+import LicensePlate from "../../assets/images/licenseplate.png";
+import SuggestionMining from "../../assets/images/suggestion.png";
+import FalseRating from "../../assets/images/falserating.png";
+import ChildAbuse from "../../assets/images/childabuse.png";
+import StudentLoan from "../../assets/images/studentloan.png";
+import CarPrice from "../../assets/images/car.jpeg";
+
 //Icons
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -84,34 +93,39 @@ const ProjectSlider = () => {
 
   let projects = [
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+      img: toolkit,
+      title: "Personality assessment toolkit",
+      desc: "A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data",
     },
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can improve customers’ experience with our skillset. We can automate existing solutions and also build new solutions from scratch for better user experience.",
+      img: LicensePlate,
+      title: "License plate recognition for vehicles",
+      desc: "Detection and recognition of diverse vehicular license plates made possible through pattern recognition, image processing and Computer Vision.",
     },
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+      img: SuggestionMining,
+      title: "Suggestion Mining",
+      desc: "Our solution to a 'suggestion mining' problem - extracting sentences and presenting them as suggestions on interaction-based platforms to meet the changing demands of consumers",
     },
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+      img: FalseRating,
+      title: "False Ratings: Mobile Application Ratings Deciphered",
+      desc: "Analysis of appropriate attributes for identifying authentic user ratings using ML and NLP tech to filter out false mobile ratings",
     },
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+      img: ChildAbuse,
+      title: "Online Child Abuse Detection",
+      desc: "In the domain of Computer Forensics and Cybersecurity, detecting online child abuse using ML and NLP to keep social media platforms free from all sorts of hate speech.",
     },
     {
-      img: "assets/img.png",
-      title: "Project Name",
-      desc: "We can add tangible value to your business. Automation and using Machine learning can increase your profits as much as 10X.",
+      img: StudentLoan,
+      title: "Student Loan Prediction",
+      desc: "none",
+    },
+    {
+      img: CarPrice,
+      title: "Car Prices Prediction",
+      desc: "none",
     },
   ];
 
