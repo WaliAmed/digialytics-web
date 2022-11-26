@@ -397,6 +397,13 @@
     margin-top: 20pt;
     margin-bottom: 20pt;
   }
+
+  #product-wrapper {
+    padding: 0 !important;
+  }
+  #product-second-line {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 991px) {

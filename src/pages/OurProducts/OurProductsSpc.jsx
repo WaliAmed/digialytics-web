@@ -109,7 +109,7 @@ const OurProductsSpc = () => {
               <img
                 src={Products[id].image}
                 alt="img"
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "500px" }}
               />
             </Col>
           </Row>
