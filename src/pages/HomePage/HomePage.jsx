@@ -28,13 +28,17 @@ const HomePage = () => {
   const [NewsLetterEmail, setNewsLetterEmail] = useState("");
 
   const myRef = useRef(null);
+  const myRef2 = useRef(null);
   const executeScroll = () => myRef.current.scrollIntoView();
+  const executeScrollToAboutUs = () => myRef2.current.scrollIntoView();
 
   useEffect(() => {
     var currentUrlWithoutParams = window.location.href.split("?")[0];
-    console.log(currentUrlWithoutParams.includes("#contact-us-section"));
     if (currentUrlWithoutParams.includes("#contact-us-section")) {
       executeScroll();
+    }
+    if (currentUrlWithoutParams.includes("#about-us-section")) {
+      executeScrollToAboutUs();
     }
   }, []);
 
@@ -79,6 +83,7 @@ const HomePage = () => {
       </Container>
 
       {/*About Us*/}
+      <div id="about-us-section" ref={myRef2}></div>
       <Row
         className="text-white"
         style={{

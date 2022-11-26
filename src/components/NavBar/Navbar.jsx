@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useNavigate } from "react-router-dom";
 import "../../Css/style.css";
 import Logo from "../../assets/images/Digitalytics2.png";
 
@@ -29,9 +28,14 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="navitems">
-            {/* <Nav.Link className="animated-border" href="/about-us">
+            <Nav.Link
+              className="animated-border"
+              onClick={() => {
+                window.location = "/#about-us-section";
+              }}
+            >
               About Us
-            </Nav.Link> */}
+            </Nav.Link>
             <Nav.Link
               className={`animated-border ${
                 pathname === "/our-domain" ? "activeNav" : ""
