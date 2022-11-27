@@ -120,12 +120,12 @@ const ProjectSlider = () => {
     {
       img: StudentLoan,
       title: "Student Loan Prediction",
-      desc: "none",
+      desc: "Our regression model was created to forecast the repayment rate based on boosted decision tree regression, whilst keeping students' data safe",
     },
     {
       img: CarPrice,
       title: "Car Prices Prediction",
-      desc: "none",
+      desc: "Combining multiple machine learning algorithms to form accurate price prediction mechanisms for used cars, keeping in mind all the attributes and features",
     },
   ];
 
