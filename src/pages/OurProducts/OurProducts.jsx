@@ -50,27 +50,27 @@ const OurProducts = () => {
           <Col className="ourPrCol" lg={3} sm={12}>
             <ProductCard
               img={LicensePlate}
-              title={"Personality assessment toolkit"}
+              title={"License plate recognition for vehicles"}
               link="/our-products/1"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="Detection and recognition of diverse vehicular license plates made possible through pattern recognition, image processing and Computer Vision."
             />
           </Col>
 
           <Col className="ourPrCol" lg={3} sm={12}>
             <ProductCard
               img={SuggestionMining}
-              title={"Personality assessment toolkit"}
+              title={"Suggestion Mining"}
               link="/our-products/2"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="Our solution to a 'suggestion mining' problem - extracting sentences and presenting them as suggestions on interaction-based platforms to meet the changing demands of consumers"
             />
           </Col>
 
           <Col className="ourPrCol" lg={3} sm={12}>
             <ProductCard
               img={FalseRating}
-              title={"Personality assessment toolkit"}
+              title={"False Ratings: Mobile Application Ratings Deciphered"}
               link="/our-products/3"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="Analysis of appropriate attributes for identifying authentic user ratings using ML and NLP tech to filter out false mobile ratings"
             />
           </Col>
 
@@ -83,9 +83,9 @@ const OurProducts = () => {
           >
             <ProductCard
               img={ChildAbuse}
-              title={"Personality assessment toolkit"}
+              title={"Online Child Abuse Detection"}
               link="/our-products/4"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="In the domain of Computer Forensics and Cybersecurity, detecting online child abuse using ML and NLP to keep social media platforms free from all sorts of hate speech."
             />
           </Col>
 
@@ -98,9 +98,9 @@ const OurProducts = () => {
           >
             <ProductCard
               img={StudentLoan}
-              title={"Personality assessment toolkit"}
+              title={"Student Loan Prediction"}
               link="/our-products/5"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="Our regression model was created to forecast the repayment rate based on boosted decision tree regression, whilst keeping students' data safe"
             />
           </Col>
 
@@ -113,9 +113,9 @@ const OurProducts = () => {
           >
             <ProductCard
               img={CarPrice}
-              title={"Personality assessment toolkit"}
+              title={"Car Prices Prediction"}
               link="/our-products/6"
-              desc="A revolutionary ML-based personality assessment solution to bridge the gap between end users and target users using LinkedIn data"
+              desc="Combining multiple machine learning algorithms to form accurate price prediction mechanisms for used cars, keeping in mind all the attributes and features"
             />
           </Col>
         </Row>
