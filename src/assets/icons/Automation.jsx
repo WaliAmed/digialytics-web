@@ -9,7 +9,7 @@ const Automation = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_177_36)">
+      <g clipPath="url(#clip0_177_36)">
         <path
           d="M53 70C55.7614 70 58 67.7614 58 65C58 62.2386 55.7614 60 53 60C50.2386 60 48 62.2386 48 65C48 67.7614 50.2386 70 53 70Z"
           fill="#004C3F"

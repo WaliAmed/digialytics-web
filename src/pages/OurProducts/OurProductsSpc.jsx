@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../Css/style.css";
 import { Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
@@ -11,9 +11,28 @@ import FalseRating from "../../assets/images/falserating.png";
 import ChildAbuse from "../../assets/images/childabuse.png";
 import StudentLoan from "../../assets/images/studentloan.png";
 import CarPrice from "../../assets/images/car.jpeg";
+import ArticleBg from "../../assets/images/product-article-bg.png";
+
+//Icons
+import { IoIosArrowForward } from "react-icons/io";
+
+//Apis
+import FetchAllProducts from "../../Api/fetchAllProducts";
+
+//Package
+import { MutatingDots } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
 const OurProductsSpc = () => {
+  let navigate = useNavigate();
   const { id } = useParams();
+
+  const [ProductLoader, setProductLoader] = useState(true);
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    FetchAllProducts(setAllProducts, setProductLoader);
+    console.log("Hello => ", id);
+  }, []);
 
   const Products = [
     {
@@ -87,52 +106,107 @@ const OurProductsSpc = () => {
       image: CarPrice,
     },
   ];
-  return (
-    <div style={{ marginTop: "120pt" }}>
-      <Row
-        className="text-center py-4"
-        style={{
-          marginBottom: "20pt",
-          background:
-            "linear-gradient(90deg, #002419 0%, #00382C 20.31%, #004C3F 50.12%, #003B2E 79.69%, #002419 100%)",
-        }}
-      >
-        <Col lg={12} sm="auto">
-          <h2 className="font-300 text-white">{Products[id].title}</h2>
-        </Col>
-      </Row>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "70%" }}>
-          <Row>
-            <Col lg={12}>
-              <img
-                src={Products[id].image}
-                alt="img"
-                style={{ width: "100%", height: "500px" }}
-              />
-            </Col>
-          </Row>
-
-          <Row className="pt-5">
-            <Col lg={12}>
-              <h1>Overview:</h1>
-              <p>{Products[id].overview}</p>
-            </Col>
-
-            <Col lg={12}>
-              <h1>The Challenges:</h1>
-              <p>{Products[id].the_challenge}</p>
-            </Col>
-
-            <Col lg={12}>
-              <h1>Solution:</h1>
-              <p>{Products[id].solution}</p>
-            </Col>
-          </Row>
-        </div>
-      </div>
+  return ProductLoader === true ? (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "80vh",
+      }}
+    >
+      <MutatingDots
+        height="100"
+        width="100"
+        color={"var(--main-color-2)"}
+        secondaryColor="black"
+        radius="12.5"
+        ariaLabel="mutating-dots-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
     </div>
+  ) : (
+    allProducts
+      .filter((fl) => fl._id === id)
+      .map((items) => {
+        return (
+          <div style={{ marginTop: "120pt" }}>
+            <Row style={{ paddingLeft: "40pt" }}>
+              <Col lg={12} sm="auto">
+                <div style={{ display: "flex" }}>
+                  <p
+                    onClick={() => navigate("/our-products")}
+                    className="our-product-small-txt"
+                    style={{ fontSize: "12px", marginRight: "4px" }}
+                  >
+                    Our Products <IoIosArrowForward />
+                  </p>
+                  <p style={{ fontSize: "12px" }}>{items.title}</p>
+                </div>
+              </Col>
+            </Row>
+
+            <Row
+              className="text-center py-4"
+              style={{
+                marginBottom: "20pt",
+              }}
+            >
+              <Col lg={12} sm="auto">
+                <h2 className="font-300">{items.title}</h2>
+              </Col>
+            </Row>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div
+                className="article-bg"
+                style={{ paddingTop: "70pt", paddingBottom: "70pt" }}
+              >
+                <div
+                  className="text-center"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <div style={{ width: "70%" }}>
+                    <Row>
+                      <Col lg={12}>
+                        <img
+                          id="prd-img"
+                          src={
+                            "https://drive.google.com/uc?export=view&id=" +
+                            items.image
+                          }
+                          alt="img"
+                          style={{ height: "300px", borderRadius: "6.33px" }}
+                        />
+                      </Col>
+                    </Row>
+
+                    <Row className="pt-5">
+                      <Col lg={12} style={{ marginBottom: "15pt" }}>
+                        <h2 className="font-300">Overview</h2>
+                        <p>{items.overview}</p>
+                      </Col>
+
+                      <Col lg={12} style={{ marginBottom: "15pt" }}>
+                        <h2 className="font-300">The Challenges</h2>
+                        <p>{items.the_challenge}</p>
+                      </Col>
+
+                      <Col lg={12} style={{ marginBottom: "15pt" }}>
+                        <h2 className="font-300">Solution</h2>
+                        <p>{items.solution}</p>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })
   );
 };
 

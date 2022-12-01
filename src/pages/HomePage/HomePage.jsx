@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 
 //Packages
 import "react-phone-input-2/lib/style.css";
+import { MutatingDots } from "react-loader-spinner";
 
 //Components
 import SharedButton from "../../components/Button/Button";
@@ -22,6 +23,9 @@ import SharedButtonLight from "../../components/Button/ButtonLight";
 import SharedCard from "../../components/Cards/Card";
 import TransparentCard from "../../components/Cards/TransparentCard";
 import ContactUsSection from "../../components/ContactUsSection/contactUs";
+
+//Apis
+import FetchAllProducts from "../../Api/fetchAllProducts";
 
 const HomePage = () => {
   const [NewsLetterBtnLoader, setNewsLetterBtnLoader] = useState(false);
@@ -40,6 +44,12 @@ const HomePage = () => {
     if (currentUrlWithoutParams.includes("#about-us-section")) {
       executeScrollToAboutUs();
     }
+  }, []);
+
+  const [ProductLoader, setProductLoader] = useState(true);
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    FetchAllProducts(setAllProducts, setProductLoader);
   }, []);
 
   return (
@@ -273,31 +283,56 @@ const HomePage = () => {
           <h2 className="font-300">OUR PRODUCTS</h2>
         </Col>
 
-        <Row>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ width: "75%" }}>
-              <ProjectSlider />
-            </div>
+        {ProductLoader === true ? (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "50pt",
+              marginBottom: "50pt",
+            }}
+          >
+            <MutatingDots
+              height="100"
+              width="100"
+              color={"var(--main-color-2)"}
+              secondaryColor="black"
+              radius="12.5"
+              ariaLabel="mutating-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
           </div>
-        </Row>
+        ) : (
+          <>
+            <Row>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ width: "75%" }}>
+                  <ProjectSlider allProducts={allProducts} />
+                </div>
+              </div>
+            </Row>
 
-        <Row className="mt-4">
-          <Col lg={12}>
-            <div className="text-center">
-              <a
-                href="/our-products"
-                style={{
-                  textDecoration: "none",
-                  color: "black",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                }}
-              >
-                Show more
-              </a>
-            </div>
-          </Col>
-        </Row>
+            <Row className="mt-4">
+              <Col lg={12}>
+                <div className="text-center">
+                  <a
+                    href="/our-products"
+                    style={{
+                      textDecoration: "none",
+                      color: "black",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Show more
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </>
+        )}
       </Row>
 
       {/*Our Top Stories*/}

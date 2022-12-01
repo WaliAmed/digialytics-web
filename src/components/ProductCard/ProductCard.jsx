@@ -1,15 +1,20 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 
+import { useNavigate } from "react-router-dom";
+
 const ProductCard = (props) => {
+  let navigate = useNavigate();
   return (
     <div
+      className="productCard"
       style={{
         background: "linear-gradient(180deg, #38786A 0%, #002419 100%)",
         borderRadius: "6.3px",
         padding: "19px 19px 19px 19px",
         minHeight: "100%",
       }}
+      onClick={() => navigate("/our-products/" + props.link)}
     >
       <img
         src={props.img}
@@ -27,7 +32,7 @@ const ProductCard = (props) => {
       </p>
       <div style={{ textAlign: "end", marginTop: "5pt" }}>
         <a
-          href={props.link}
+          href={"/our-products/" + props.link}
           className="text-white font-200"
           style={{ fontSize: "9px", textDecoration: "none" }}
         >

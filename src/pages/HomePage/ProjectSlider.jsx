@@ -16,7 +16,7 @@ import CarPrice from "../../assets/images/car.jpeg";
 //Icons
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const ProjectSlider = () => {
+const ProjectSlider = (props) => {
   const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
 
   function SamplePrevArrow(props) {
@@ -131,11 +131,17 @@ const ProjectSlider = () => {
 
   return (
     <Slider {...settings}>
-      {projects.map((items, index) => {
+      {props.allProducts?.map((items, index) => {
         return (
           <div style={{ width: "100%" }} key={index}>
             <div className="card-wrapper">
-              <img src={items.img} alt="img" style={{ height: "130pt" }} />
+              <img
+                src={
+                  "https://drive.google.com/uc?export=view&id=" + items.image
+                }
+                alt="img"
+                style={{ height: "130pt" }}
+              />
 
               <h5
                 className="font-400"
@@ -144,7 +150,7 @@ const ProjectSlider = () => {
                 {items.title}
               </h5>
 
-              <p className="font-300">{items.desc}</p>
+              <p className="font-300">{items.description}</p>
             </div>
           </div>
         );
