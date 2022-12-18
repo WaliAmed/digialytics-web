@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "../../Css/style.css";
+import { useMediaQuery } from "react-responsive";
 
 //Icons
 import DollarIcon from "../../assets/icons/DollarIcon";
@@ -10,8 +11,10 @@ import LawIcon from "../../assets/icons/LawIcon";
 import TickIcon from "../../assets/icons/TickIcon";
 
 const OurDomain = () => {
+  const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
+
   return (
-    <div style={{ marginTop: "120pt" }}>
+    <div id="our-domain-main" style={{ marginTop: "120pt" }}>
       <Row
         className="text-center py-4 my-5"
         style={{
@@ -38,6 +41,21 @@ const OurDomain = () => {
             <div className="mb-3">
               <h3 className="font-300">Finance</h3>
             </div>
+            {!isMobileScreen && (
+              <div
+                style={{
+                  width: "100%",
+                  marginBottom: "15pt",
+                }}
+              >
+                <img
+                  className="d1Image"
+                  src="assets/d1.png"
+                  style={{ height: "200pt" }}
+                  alt="d1"
+                />
+              </div>
+            )}
             <div className="mb-3 domain-desc" style={{ paddingRight: "20pt" }}>
               <p className="font-300">
                 Forecasting has definitely made life easier and beneficial.
@@ -86,22 +104,24 @@ const OurDomain = () => {
               </ul>
             </div>
           </Col>
-          <Col
-            id="DomainImage"
-            lg={4}
-            sm={12}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              className="d1Image"
-              src="assets/d1.png"
-              style={{ height: "200pt" }}
-              alt="d1"
-            />
-          </Col>
+          {isMobileScreen && (
+            <Col
+              id="DomainImage"
+              lg={4}
+              sm={12}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img
+                className="d1Image"
+                src="assets/d1.png"
+                style={{ height: "200pt" }}
+                alt="d1"
+              />
+            </Col>
+          )}
         </Row>
 
         {/*Healthcare*/}
@@ -117,6 +137,21 @@ const OurDomain = () => {
             <div className="mb-3">
               <h3 className="font-300">HealthCare</h3>
             </div>
+            {!isMobileScreen && (
+              <div
+                style={{
+                  width: "100%",
+                  marginBottom: "15pt",
+                }}
+              >
+                <img
+                  className="d2Image"
+                  src="assets/d2.png"
+                  style={{ height: "170pt" }}
+                  alt="d2"
+                />
+              </div>
+            )}
             <div className="mb-3 domain-desc" style={{ paddingRight: "20pt" }}>
               <p className="font-300">
                 We use Computer Vision and Data Analysis to improve medical
@@ -173,22 +208,24 @@ const OurDomain = () => {
               </ul>
             </div>
           </Col>
-          <Col
-            id="DomainImage"
-            lg={4}
-            sm={12}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              className="d2Image"
-              src="assets/d2.png"
-              style={{ height: "170pt" }}
-              alt="d2"
-            />
-          </Col>
+          {isMobileScreen && (
+            <Col
+              id="DomainImage"
+              lg={4}
+              sm={12}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img
+                className="d2Image"
+                src="assets/d2.png"
+                style={{ height: "170pt" }}
+                alt="d2"
+              />
+            </Col>
+          )}
         </Row>
 
         {/*Retail*/}
@@ -204,6 +241,21 @@ const OurDomain = () => {
             <div className="mb-3">
               <h3 className="font-300">Retail</h3>
             </div>
+            {!isMobileScreen && (
+              <div
+                style={{
+                  width: "100%",
+                  marginBottom: "15pt",
+                }}
+              >
+                <img
+                  className="d3Image"
+                  src="assets/d3.png"
+                  style={{ height: "170pt" }}
+                  alt="d3"
+                />
+              </div>
+            )}
             <div className="mb-3 domain-desc" style={{ paddingRight: "20pt" }}>
               <p className="font-300">
                 We can use past, current and future data to help businesses
@@ -249,22 +301,24 @@ const OurDomain = () => {
               </ul>
             </div>
           </Col>
-          <Col
-            id="DomainImage"
-            lg={4}
-            sm={12}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              className="d3Image"
-              src="assets/d3.png"
-              style={{ height: "170pt" }}
-              alt="d3"
-            />
-          </Col>
+          {isMobileScreen && (
+            <Col
+              id="DomainImage"
+              lg={4}
+              sm={12}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img
+                className="d3Image"
+                src="assets/d3.png"
+                style={{ height: "170pt" }}
+                alt="d3"
+              />
+            </Col>
+          )}
         </Row>
 
         {/*Law */}
@@ -280,6 +334,21 @@ const OurDomain = () => {
             <div className="mb-3">
               <h3 className="font-300">Law </h3>
             </div>
+            {!isMobileScreen && (
+              <div
+                style={{
+                  width: "100%",
+                  marginBottom: "15pt",
+                }}
+              >
+                <img
+                  className="d4Image"
+                  src="assets/d4.png"
+                  style={{ height: "160pt" }}
+                  alt="d4"
+                />
+              </div>
+            )}
             <div className="mb-3 domain-desc" style={{ paddingRight: "20pt" }}>
               <p className="font-300">
                 With the digitalization of case files and courts data, we can
@@ -311,24 +380,49 @@ const OurDomain = () => {
               </ul>
             </div>
           </Col>
-          <Col
-            id="DomainImage"
-            lg={4}
-            sm={12}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              className="d4Image"
-              src="assets/d4.png"
-              style={{ height: "160pt" }}
-              alt="d4"
-            />
-          </Col>
+          {isMobileScreen && (
+            <Col
+              id="DomainImage"
+              lg={4}
+              sm={12}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img
+                className="d4Image"
+                src="assets/d4.png"
+                style={{ height: "160pt" }}
+                alt="d4"
+              />
+            </Col>
+          )}
         </Row>
       </Container>
+
+      <Row>
+        <Col>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "-100pt",
+            }}
+          >
+            <p
+              style={{
+                cursor: "pointer",
+                textDecoration: "underline",
+                fontSize: "14px",
+              }}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              GO TO TOP
+            </p>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -204,6 +204,29 @@ const OurProductsSpc = () => {
                 </div>
               </div>
             </div>
+
+            <Row style={{ marginTop: "30pt" }}>
+              <Col>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "-100pt",
+                  }}
+                >
+                  <p
+                    style={{
+                      cursor: "pointer",
+                      textDecoration: "underline",
+                      fontSize: "14px",
+                    }}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    GO TO TOP
+                  </p>
+                </div>
+              </Col>
+            </Row>
           </div>
         );
       })

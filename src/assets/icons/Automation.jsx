@@ -6,6 +6,7 @@ const Automation = () => {
       width="51"
       height="50"
       viewBox="0 0 81 80"
+      className="mobile-icon"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

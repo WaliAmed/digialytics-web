@@ -8,6 +8,7 @@ const ResearchIcon = () => {
       viewBox="0 0 81 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="mobile-icon"
     >
       <g clipPath="url(#clip0_431_954)">
         <path

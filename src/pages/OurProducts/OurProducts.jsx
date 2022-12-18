@@ -28,8 +28,9 @@ const OurProducts = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: "120pt" }}>
+    <div id="our-prd-main" style={{ marginTop: "120pt" }}>
       <Row
+        id="our-prd-title"
         className="text-center py-4"
         style={{
           marginBottom: "30pt",

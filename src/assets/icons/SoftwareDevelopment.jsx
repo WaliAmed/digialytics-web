@@ -7,6 +7,7 @@ const SoftwareDevelopment = () => {
       height="50"
       viewBox="0 0 81 80"
       fill="none"
+      className="mobile-icon"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

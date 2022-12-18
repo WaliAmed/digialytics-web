@@ -2,11 +2,20 @@ import React from "react";
 
 const TransparentCard = (props) => {
   return (
-    <div className="py-4 px-3" style={{ backgroundColor: "white" }}>
+    <div
+      id="transparent-card"
+      className="py-4 px-3"
+      style={{ backgroundColor: "white" }}
+    >
       <img src={props.img} alt="img" style={{ height: "160pt" }} />
 
-      <h4 className="font-400 my-4 px-3">{props.title}</h4>
-      <p className="font-200">{props.desc}</p>
+      <h4
+        className="font-400 my-4 px-3 mobile-title"
+        id="transparent-card-title"
+      >
+        {props.title}
+      </h4>
+      <p className="font-200 mobile-p">{props.desc}</p>
     </div>
   );
 };

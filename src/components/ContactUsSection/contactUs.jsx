@@ -48,17 +48,21 @@ const ContactUsSection = () => {
     >
       <Row className="my-5">
         <Col id="FormText" sm={12} lg={7}>
-          <h2 className="font-300">
+          <h2 className="font-300 contact-us-spc4r">
             Have a question? <br />
             We are here to help.
           </h2>
-          <p className="contactUsP font-300">
+          <p className="contactUsP font-300 contact-us-spc4r">
             Mention your email and/or contact number followed by your query in
             the message box. Our support team will get back to you swiftly with
             the answers you need!
           </p>
         </Col>
-        <Col lg={5} style={{ display: "flex", justifyContent: "flex-end" }}>
+        <Col
+          id="contactus-cc4w"
+          lg={5}
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
           <Form style={{ width: "90%" }}>
             <Form.Group className="mb-3">
               <Form.Control
@@ -107,6 +111,7 @@ const ContactUsSection = () => {
             </Form.Group>
 
             <div
+              id="contact-us-button"
               className="mt-4"
               style={{ display: "flex", justifyContent: "flex-end" }}
             >

@@ -7,11 +7,11 @@ import Col from "react-bootstrap/Col";
 
 //Packages
 import "react-phone-input-2/lib/style.css";
+import { useLocation } from "react-router-dom";
 import { MutatingDots } from "react-loader-spinner";
 
 //Components
 import SharedButton from "../../components/Button/Button";
-import BorderedCard from "../../components/Cards/BorderedCard";
 import ProjectSlider from "./ProjectSlider";
 import ButtonLight from "../../components/Button/ButtonLight";
 
@@ -19,8 +19,6 @@ import ButtonLight from "../../components/Button/ButtonLight";
 import ResearchIcon from "../../assets/icons/ResearchIcon";
 import SoftwareDevelopment from "../../assets/icons/SoftwareDevelopment";
 import Automation from "../../assets/icons/Automation";
-import SharedButtonLight from "../../components/Button/ButtonLight";
-import SharedCard from "../../components/Cards/Card";
 import TransparentCard from "../../components/Cards/TransparentCard";
 import ContactUsSection from "../../components/ContactUsSection/contactUs";
 
@@ -31,20 +29,28 @@ const HomePage = () => {
   const [NewsLetterBtnLoader, setNewsLetterBtnLoader] = useState(false);
   const [NewsLetterEmail, setNewsLetterEmail] = useState("");
 
-  const myRef = useRef(null);
-  const myRef2 = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
-  const executeScrollToAboutUs = () => myRef2.current.scrollIntoView();
+  const executeScroll = () => {
+    let contactUs = document.getElementById("contact-us-section");
+    contactUs.scrollIntoView();
+  };
+  const executeScrollToAboutUs = () => {
+    let AboutUs = document.getElementById("about-us-section");
+    AboutUs.scrollIntoView();
+  };
+
+  let location = useLocation();
 
   useEffect(() => {
-    var currentUrlWithoutParams = window.location.href.split("?")[0];
-    if (currentUrlWithoutParams.includes("#contact-us-section")) {
-      executeScroll();
-    }
-    if (currentUrlWithoutParams.includes("#about-us-section")) {
-      executeScrollToAboutUs();
-    }
-  }, []);
+    setTimeout(function () {
+      var currentUrlWithoutParams = window.location.href;
+      if (currentUrlWithoutParams.includes("#contact-us-section")) {
+        executeScroll();
+      }
+      if (currentUrlWithoutParams.includes("#about-us-section")) {
+        executeScrollToAboutUs();
+      }
+    }, 500);
+  }, [location]);
 
   const [ProductLoader, setProductLoader] = useState(true);
   const [allProducts, setAllProducts] = useState([]);
@@ -66,7 +72,9 @@ const HomePage = () => {
                 height: "100%",
               }}
             >
-              <h1 className="font-500">INNOVATION. EFFICIENCY. RELIABILITY.</h1>
+              <h1 className="font-500 mobile-title">
+                INNOVATION. EFFICIENCY. RELIABILITY.
+              </h1>
 
               <p style={{ width: "100%", marginTop: "22px" }}>
                 Providing customers all around the globe with the best computer
@@ -76,7 +84,7 @@ const HomePage = () => {
                 efficiency and quality of your product.
               </p>
 
-              <a href="#news-letter">
+              <a href="#news-letter" className="hero-button">
                 <SharedButton title="SUBSCRIBE" />
               </a>
             </div>
@@ -93,9 +101,10 @@ const HomePage = () => {
       </Container>
 
       {/*About Us*/}
-      <div id="about-us-section" ref={myRef2}></div>
+      <div id="about-us-section"></div>
       <Row
         className="text-white"
+        id="about-us-sec"
         style={{
           background: "var(--main-bg)",
           marginBottom: "90pt",
@@ -107,7 +116,9 @@ const HomePage = () => {
           <h3 className="font-300" style={{ marginBottom: "50pt" }}>
             ABOUT US
           </h3>
-          <h1 className="mt-3 font-500">You Imagine it. We Deliver it.</h1>
+          <h1 className="mt-3 font-500 mobile-title">
+            You Imagine it. We Deliver it.
+          </h1>
         </Col>
         <Col lg={12} className="text-center pb-4">
           <div
@@ -148,8 +159,8 @@ const HomePage = () => {
               <Row className="mb-3">
                 <ResearchIcon />
               </Row>
-              <h4 className="font-400">Research</h4>
-              <p className="px-5 font-200" id="ourDomainDesc">
+              <h4 className="font-400 mobile-h4">Research</h4>
+              <p className="px-5 font-200 mobile-p" id="ourDomainDesc">
                 Our team analyzes the problem, devises and compares different
                 possible solutions, derives the best possible one, and then
                 optimally implements it.
@@ -159,8 +170,8 @@ const HomePage = () => {
               <Row className="mb-3">
                 <SoftwareDevelopment />
               </Row>
-              <h4 className="font-400">Software Development</h4>
-              <p className="px-5 font-200" id="ourDomainDesc">
+              <h4 className="font-400 mobile-h4">Software Development</h4>
+              <p className="px-5 font-200 mobile-p" id="ourDomainDesc">
                 Our team of software developers provide B2B products to our
                 clients. We provide Web applications, Android and iOS
                 applications as per requirement.
@@ -170,8 +181,8 @@ const HomePage = () => {
               <Row className="mb-3">
                 <Automation />
               </Row>
-              <h4 className="font-400">Automation</h4>
-              <p className="px-5 font-200" id="ourDomainDesc">
+              <h4 className="font-400 mobile-h4">Automation</h4>
+              <p className="px-5 font-200 mobile-p" id="ourDomainDesc">
                 If you have an existing system that needs automation, or whether
                 you want to integrate Machine Learning to your program, we can
                 help you do both.
@@ -235,7 +246,9 @@ const HomePage = () => {
         }}
       >
         <Col lg={12} className="text-center pt-4">
-          <h1 className="mt-3 font-500">Want the latest news and offers?</h1>
+          <h1 className="mt-3 font-500 newsletter-h1">
+            Want the latest news and offers?
+          </h1>
         </Col>
         <Col lg={12} className="text-center py-4">
           <p className="font-300 m-0">
@@ -278,7 +291,7 @@ const HomePage = () => {
 
       {/*Our Projects*/}
       <div id="our-projects-section"></div>
-      <Row className="py-5" style={{ marginBottom: "90pt" }}>
+      <Row id="prj-sec" className="py-5" style={{ marginBottom: "90pt" }}>
         <Col className="text-center" style={{ marginBottom: "25pt" }}>
           <h2 className="font-300">OUR PRODUCTS</h2>
         </Col>
@@ -308,7 +321,7 @@ const HomePage = () => {
           <>
             <Row>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div style={{ width: "75%" }}>
+                <div id="prj-slider" style={{ width: "75%" }}>
                   <ProjectSlider allProducts={allProducts} />
                 </div>
               </div>
@@ -411,8 +424,31 @@ const HomePage = () => {
       </div> */}
 
       {/*Contact*/}
-      <div id="contact-us-section" ref={myRef}></div>
+      <div id="contact-us-section"></div>
       <ContactUsSection />
+
+      <Row>
+        <Col>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "-100pt",
+            }}
+          >
+            <p
+              style={{
+                cursor: "pointer",
+                textDecoration: "underline",
+                fontSize: "14px",
+              }}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              GO TO TOP
+            </p>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

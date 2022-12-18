@@ -4,10 +4,28 @@
   text-transform: uppercase;
 }
 
+.navBar {
+  border: 0.5px solid rgb(208, 208, 208) !important;
+  border-left: none !important;
+  border-radius: none !important;
+  border-top: none !important;
+}
+
 #navnav {
   display: flex;
   justify-content: center;
+  border-bottom: red;
 }
+
+#offcanvasNavbar-expand-md {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+
+/* .container-md {
+  margin-right: 20px !important;
+  margin-left: 20px !important;
+} */
 
 .nav-link {
   margin-left: 15px;
@@ -70,13 +88,14 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background: linear-gradient(180deg, #38786a 0%, #002419 100%);
   padding-top: 8pt;
   padding-left: 10pt;
   padding-right: 10pt;
   border-radius: 5pt;
   text-align: center;
   padding-bottom: 20pt;
+  color: white;
 }
 
 .navBar .animated-border {
@@ -205,11 +224,69 @@
 }
 
 @media (max-width: 480px) {
+  .slick-slide .card-wrapper {
+    margin: 0px !important;
+    margin-right: 1.5px !important;
+    margin-left: 1.5px !important;
+  }
+  .mobile-icon {
+    height: 40px !important;
+  }
+  .mobile-h4 {
+    font-size: 18px !important;
+  }
+  .mobile-p {
+    font-size: 14px !important;
+  }
+  #ourDomainCol {
+    margin-bottom: 15pt !important;
+  }
+  #about-us-sec {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    margin-bottom: 70px !important;
+  }
+  #our-domain-section {
+    margin-bottom: 15pt !important;
+  }
+  #transparent-card {
+    padding-bottom: 0px !important;
+  }
+  #transparent-card-title {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  #our-solution-section {
+    padding-bottom: 0rem !important;
+  }
+  .newsletter-h1 {
+    font-size: 24px !important;
+  }
+
+  #transparent-card img {
+    height: 80pt !important;
+  }
+  .mobile-title {
+    font-size: 18px;
+  }
+  .navbar-brand {
+    margin-left: 0px !important;
+  }
+  .hero-button {
+    margin-top: 20px;
+  }
+  #prj-slider {
+    width: 85% !important;
+  }
+  #prj-sec {
+    margin-bottom: 0pt !important;
+    padding-bottom: 1rem !important;
+  }
   #newsLetterBg {
     background-image: url("../assets/images/newsLetterBgMb.png") !important;
   }
   #Starter {
-    margin-top: 100pt;
+    margin-top: 90pt;
   }
   #ourstoriesBg {
     background-image: url("../assets/images/blogsBgMb.png");
@@ -232,8 +309,8 @@
     padding: 0pt 20pt 0pt 20pt;
   }
   #navnav {
-    padding-left: 25pt;
-    padding-right: 25pt;
+    padding-left: 18pt;
+    padding-right: 18pt;
     justify-content: space-between !important;
   }
   .navitems {
@@ -315,7 +392,10 @@
     width: 100% !important;
   }
   #newsLetterInput input {
-    width: 80% !important;
+    width: 92% !important;
+  }
+  #newsLetterBg {
+    margin-bottom: 30px !important;
   }
   #newsLetterCol {
     display: block !important;
@@ -332,7 +412,24 @@
     padding: 0 !important;
   }
   #ContactUsRow {
-    margin-top: 60pt !important;
+    margin-top: 0pt !important;
+    margin-bottom: 30pt !important;
+  }
+  #ContactUsRow {
+    width: 100% !important;
+  }
+  #contact-us-button {
+    margin-top: 1rem !important;
+    justify-content: center !important;
+  }
+  .contact-us-spc4r {
+    margin-bottom: 1rem !important;
+  }
+  #contactus-cc4w {
+    display: block !important;
+  }
+  #contactus-cc4w form {
+    width: 100% !important;
   }
   #NewsLetterButton {
     display: flex !important;
@@ -341,7 +438,7 @@
     margin-top: 5pt;
   }
   #NewsLetterButton button {
-    width: 67% !important;
+    width: 40% !important;
   }
   #WebLogo {
     height: 22pt !important;
@@ -398,7 +495,7 @@
   }
   #SolutionHeading {
     margin-top: 30pt !important;
-    margin-bottom: 50pt !important;
+    margin-bottom: 30pt !important;
   }
 
   .SolutionBigCardClass1 {
@@ -417,6 +514,19 @@
     margin-top: 20pt;
     margin-bottom: 20pt;
   }
+  #our-domain-main {
+    margin-top: 100pt !important;
+  }
+  .domain-list li {
+    margin-bottom: 2pt !important;
+  }
+  .navbar-toggler {
+    padding: 0 !important;
+  }
+
+  #ourDomainRow {
+    padding: 0 !important;
+  }
 
   #product-wrapper {
     padding: 0 !important;
@@ -430,6 +540,38 @@
   #prd-img {
     width: 100% !important;
     height: 160px !important;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  #SolutionRow #SolutionRow-col {
+    padding-left: 16pt !important;
+    padding-right: 16pt !important;
+  }
+  #SmallBoxes {
+    padding-left: 7pt !important;
+    padding-right: 7pt !important;
+  }
+  #sm-bx-2 {
+    padding-left: 7pt !important;
+    padding-right: 7pt !important;
+  }
+  .small-box2 {
+    padding: 3% 14% 3% 4% !important;
+  }
+  #allprjs {
+    padding-left: 20pt !important;
+    padding-right: 20pt !important;
+    margin-bottom: 5pt !important;
+  }
+  #our-prd-title {
+    margin-bottom: 0pt !important;
+  }
+  #our-prd-main {
+    margin-top: 85pt !important;
+  }
+  #SolutionHeading {
+    padding-top: 40pt !important;
   }
 }
 

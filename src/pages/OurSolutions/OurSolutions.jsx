@@ -30,7 +30,7 @@ const OurSolutions = () => {
         }}
         id="SolutionRow"
       >
-        <Col lg={5} style={{ marginBottom: "10pt" }}>
+        <Col id="SolutionRow-col" lg={5} style={{ marginBottom: "10pt" }}>
           <div
             className="p-4"
             style={{ height: "100%", backgroundColor: "white" }}
@@ -38,7 +38,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Language Manipulation
             </h5>
-            <small style={{ fontSize: "14px" }}>
+            <small style={{ fontSize: "12px" }}>
               <b>Tags: NLP (Natural Language Processing)</b>
             </small>
             <p style={{ fontSize: "14px" }}>
@@ -137,7 +137,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Text generation
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 Text generation is a subfield of NLP. Through AI and
                 computational linguistics, our models automatically generate
                 natural language texts. This can satisfy certain communicative
@@ -148,7 +148,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Chat-bots
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 To make the experience as human as possible, we implement NLP
                 models and provide chat-bots - a computer program designed to
                 simulate conversation withour customers over the internet.
@@ -168,7 +168,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Sentiment analysis
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 Because tone is important, right? We use NLP techniques to
                 determine whether data is positive, negative or neutral.
                 Sentiment analysis or opinion mining is implemented to
@@ -179,7 +179,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Recommendation systems
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 Different recommendation algorithms are build to understand user
                 interest and requirements through our NLP models to optimize
                 browsing and reach, which is critical for the growth of your
@@ -196,7 +196,7 @@ const OurSolutions = () => {
           marginBottom: "100pt",
         }}
       >
-        <Col lg={5} style={{ marginBottom: "10pt" }}>
+        <Col id="SolutionRow-col" lg={5} style={{ marginBottom: "10pt" }}>
           <div
             className="p-4"
             style={{ height: "100%", backgroundColor: "white" }}
@@ -204,7 +204,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Media Recognition
             </h5>
-            <small style={{ fontSize: "14px" }}>
+            <small style={{ fontSize: "12px" }}>
               <b>Tags: CV (Computer Vision)</b>
             </small>
             <p style={{ fontSize: "14px" }}>
@@ -272,6 +272,7 @@ const OurSolutions = () => {
             />
           </div>
           <div
+            id="sm-bx-2"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -283,7 +284,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Video analysis
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 Achieve the capability of automatically analyzing a video to
                 detect and determine small details or critical events that might
                 get missed without this feature.
@@ -291,6 +292,7 @@ const OurSolutions = () => {
             </div>
           </div>
           <div
+            id="sm-bx-2"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -302,7 +304,7 @@ const OurSolutions = () => {
               <h5 className="font-400" style={{ fontSize: "22px" }}>
                 Medical imaging
               </h5>
-              <p className="font-200" style={{ fontSize: "13px" }}>
+              <p className="font-300" style={{ fontSize: "13px" }}>
                 We provide our customers with one of the most important advanced
                 medical tech. which is medical imaging of the interior body. We
                 implement different CV techniques in different processes as per
@@ -319,7 +321,7 @@ const OurSolutions = () => {
           marginBottom: "70pt",
         }}
       >
-        <Col lg={4} style={{ marginBottom: "10pt" }}>
+        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass1 pt-5 p-4"
@@ -328,7 +330,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Forecasting / Time series
             </h5>
-            <small style={{ fontSize: "14px" }}>
+            <small style={{ fontSize: "12px" }}>
               <b>Tags: ML (Machine Learning)</b>
             </small>
             <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
@@ -377,7 +379,7 @@ const OurSolutions = () => {
           </div>
         </Col>
 
-        <Col lg={4} style={{ marginBottom: "10pt" }}>
+        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass2 pt-5 p-4"
@@ -386,7 +388,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Data Analysis
             </h5>
-            <small style={{ fontSize: "14px" }}>
+            <small style={{ fontSize: "12px" }}>
               <b>Tags: ML (Machine Learning), AI (Artificial Intelligence)</b>
             </small>
             <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
@@ -449,7 +451,7 @@ const OurSolutions = () => {
           </div>
         </Col>
 
-        <Col lg={4} style={{ marginBottom: "10pt" }}>
+        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass3 pt-5 p-4"
@@ -458,7 +460,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Hardware Programming
             </h5>
-            <small style={{ fontSize: "14px" }}>
+            <small style={{ fontSize: "12px" }}>
               <b>Tags: ML (Machine Learning), AI (Artificial Intelligence)</b>
             </small>
             <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
@@ -486,6 +488,30 @@ const OurSolutions = () => {
                 Edge Computing
               </li>
             </ul>
+          </div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "-100pt",
+            }}
+          >
+            <p
+              style={{
+                cursor: "pointer",
+                textDecoration: "underline",
+                fontSize: "14px",
+                color: "white",
+              }}
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              GO TO TOP
+            </p>
           </div>
         </Col>
       </Row>
