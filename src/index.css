@@ -8,7 +8,7 @@ html {
 }
 
 :root {
-  --main-color: linear-gradient(180deg, rgba(0, 61, 76, 0.97) 0%, #002419 100%);
+  --main-color: linear-gradient(180deg, #004c3f 0%, #002419 100%);
   --main-color-2: rgba(0, 76, 63, 97%);
   --main-bg: linear-gradient(
     90deg,

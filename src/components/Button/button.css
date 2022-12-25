@@ -22,8 +22,8 @@
   width: 90pt !important;
   border-radius: 50px !important;
   background: var(--main-color) !important;
-  padding-top: 5pt !important;
-  padding-bottom: 5pt !important;
+  padding-top: 6pt !important;
+  padding-bottom: 6pt !important;
   display: flex !important;
   justify-content: center !important;
   font-size: 14px !important;
@@ -49,8 +49,8 @@
     #e5e5e5 62.5%,
     #bbbbbb 100%
   ) !important;
-  padding-top: 5pt !important;
-  padding-bottom: 5pt !important;
+  padding-top: 6pt !important;
+  padding-bottom: 6pt !important;
   display: flex !important;
   justify-content: center !important;
   font-size: 14px !important;

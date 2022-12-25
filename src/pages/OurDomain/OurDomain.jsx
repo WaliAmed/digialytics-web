@@ -22,7 +22,7 @@ const OurDomain = () => {
             "linear-gradient(90deg, #002419 0%, #00382C 20.31%, #004C3F 50.12%, #003B2E 79.69%, #002419 100%)",
         }}
       >
-        <Col lg={12} sm="auto">
+        <Col lg={12} sm={12}>
           <h2 className="font-300 text-white">OUR DOMAIN</h2>
         </Col>
       </Row>
@@ -369,7 +369,7 @@ const OurDomain = () => {
                   <i className="tick-icon">
                     <TickIcon />
                   </i>
-                  Help citizens know exact clauses for any offense
+                  Identify exact clauses for any offence
                 </li>
                 <li className="font-400">
                   <i className="tick-icon">
@@ -415,6 +415,7 @@ const OurDomain = () => {
                 cursor: "pointer",
                 textDecoration: "underline",
                 fontSize: "14px",
+                fontWeight: "500",
               }}
               onClick={() => window.scrollTo(0, 0)}
             >

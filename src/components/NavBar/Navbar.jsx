@@ -8,6 +8,13 @@ import "../../Css/style.css";
 import Logo from "../../assets/images/Digitalytics2.png";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useMediaQuery } from "react-responsive";
+import { Col, Row } from "react-bootstrap";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
 
 const NavbarComponent = () => {
   const { pathname } = window.location;
@@ -25,7 +32,7 @@ const NavbarComponent = () => {
       expand="lg"
       style={{
         paddingBottom: "10pt",
-        paddingTop: "30pt",
+        paddingTop: `${isMobileScreen === false ? "10pt" : "30pt"}`,
         backgroundColor: "rgba(255, 255, 255, 0.9)",
         boxShadow: "0px 4px 18px 0px rgba(255, 255, 255, 0.6)",
       }}
@@ -113,10 +120,50 @@ const NavbarComponent = () => {
                   window.location = "/#contact-us-section";
                   handleClose();
                 }}
+                style={{
+                  marginTop: `${isMobileScreen === false ? "20pt" : ""}`,
+                }}
               >
                 Contact Us
               </Nav.Link>
             </Nav>
+
+            {!isMobileScreen && (
+              <Row style={{ marginTop: "280pt" }}>
+                <Col
+                  lg={12}
+                  style={{
+                    padding: 0,
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <a href="/" className="canvas-icon">
+                    <FaLinkedin size={24} color={"green"} />
+                  </a>
+
+                  <a
+                    href="/"
+                    className="canvas-icon"
+                    style={{ marginRight: "5pt", marginLeft: "10pt" }}
+                  >
+                    <FaInstagram size={24} color={"green"} />
+                  </a>
+
+                  <a
+                    href="/"
+                    className="canvas-icon"
+                    style={{ marginLeft: "5pt", marginRight: "10pt" }}
+                  >
+                    <FaFacebookSquare size={24} color={"green"} />
+                  </a>
+
+                  <a href="/" className="canvas-icon">
+                    <FaTwitterSquare size={24} color={"green"} />
+                  </a>
+                </Col>
+              </Row>
+            )}
           </Offcanvas.Body>
         </Navbar.Offcanvas>
         {/* <Navbar.Collapse

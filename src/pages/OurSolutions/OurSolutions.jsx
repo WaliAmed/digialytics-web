@@ -1,11 +1,14 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "../../Css/style.css";
+import { useMediaQuery } from "react-responsive";
 
 //Icons
 import TickIconSmall from "../../assets/icons/TickIconSmall";
 
 const OurSolutions = () => {
+  const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
+
   return (
     <div
       className="OurSolutionsPage pb-5"
@@ -38,7 +41,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Language Manipulation
             </h5>
-            <small style={{ fontSize: "12px" }}>
+            <small style={{ fontSize: "10px" }}>
               <b>Tags: NLP (Natural Language Processing)</b>
             </small>
             <p style={{ fontSize: "14px" }}>
@@ -111,7 +114,7 @@ const OurSolutions = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            marginBottom: "10pt",
+            marginBottom: `${isMobileScreen === false ? "0pt" : "10pt"}`,
           }}
         >
           <div
@@ -204,7 +207,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Media Recognition
             </h5>
-            <small style={{ fontSize: "12px" }}>
+            <small style={{ fontSize: "10px" }}>
               <b>Tags: CV (Computer Vision)</b>
             </small>
             <p style={{ fontSize: "14px" }}>
@@ -258,7 +261,7 @@ const OurSolutions = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            marginBottom: "10pt",
+            marginBottom: `${isMobileScreen === false ? "0pt" : "10pt"}`,
           }}
         >
           <div
@@ -321,7 +324,12 @@ const OurSolutions = () => {
           marginBottom: "70pt",
         }}
       >
-        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
+        <Col
+          id="SolutionRow-col"
+          className="sol-row"
+          lg={4}
+          style={{ marginBottom: "10pt" }}
+        >
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass1 pt-5 p-4"
@@ -330,10 +338,10 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Forecasting / Time series
             </h5>
-            <small style={{ fontSize: "12px" }}>
+            <small style={{ fontSize: "10px" }}>
               <b>Tags: ML (Machine Learning)</b>
             </small>
-            <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
+            <p style={{ fontSize: "14px", marginBottom: "60pt" }}>
               We provide our customers with the best forecasting results. Based
               on past and current data, following values’ predictions can be
               made to optimize costs and results
@@ -379,7 +387,12 @@ const OurSolutions = () => {
           </div>
         </Col>
 
-        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
+        <Col
+          id="SolutionRow-col"
+          className="sol-row"
+          lg={4}
+          style={{ marginBottom: "10pt" }}
+        >
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass2 pt-5 p-4"
@@ -388,10 +401,10 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Data Analysis
             </h5>
-            <small style={{ fontSize: "12px" }}>
+            <small style={{ fontSize: "10px" }}>
               <b>Tags: ML (Machine Learning), AI (Artificial Intelligence)</b>
             </small>
-            <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
+            <p style={{ fontSize: "14px" }}>
               When it comes to visualizing data on screens, user experience is
               very important. And to improve user’s visual experience, perfect
               representation of data is crucial. We can create interactive
@@ -451,7 +464,12 @@ const OurSolutions = () => {
           </div>
         </Col>
 
-        <Col id="SolutionRow-col" lg={4} style={{ marginBottom: "10pt" }}>
+        <Col
+          id="SolutionRow-col"
+          className="sol-row"
+          lg={4}
+          style={{ marginBottom: "10pt" }}
+        >
           <div
             id="SolutionBigCard"
             className="SolutionBigCardClass3 pt-5 p-4"
@@ -460,7 +478,7 @@ const OurSolutions = () => {
             <h5 className="font-400" style={{ fontSize: "22px" }}>
               Hardware Programming
             </h5>
-            <small style={{ fontSize: "12px" }}>
+            <small style={{ fontSize: "10px" }}>
               <b>Tags: ML (Machine Learning), AI (Artificial Intelligence)</b>
             </small>
             <p style={{ fontSize: "14px", marginBottom: "40pt" }}>
@@ -507,6 +525,7 @@ const OurSolutions = () => {
                 textDecoration: "underline",
                 fontSize: "14px",
                 color: "white",
+                fontWeight: "500",
               }}
               onClick={() => window.scrollTo(0, 0)}
             >

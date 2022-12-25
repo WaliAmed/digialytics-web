@@ -148,79 +148,48 @@ const Footer = () => {
 
           {!isMobileScreen && (
             <div>
-              <Row style={{ paddingBottom: "10pt" }}>
-                <Col xs={6} lg={12} style={{ padding: 0 }}>
-                  <div>
-                    <img src={Logo} alt="logo" style={{ height: "20pt" }} />
-                  </div>
-                </Col>
+              <Row style={{ paddingBottom: "5pt" }}>
                 <Col
-                  xs={6}
+                  xs={12}
                   lg={12}
                   style={{
                     padding: 0,
                     display: "flex",
-                    flexDirection: "row-reverse",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  <a href="/" className="footer-icon m-0">
-                    <FaTwitterSquare size={24} />
-                  </a>
-
                   <a href="/" className="footer-icon">
-                    <FaFacebookSquare size={24} />
-                  </a>
-
-                  <a href="/" className="footer-icon">
-                    <FaInstagram size={24} />
-                  </a>
-
-                  <a href="/" className="footer-icon">
-                    <FaLinkedin size={24} />
-                  </a>
-                </Col>
-              </Row>
-
-              <Row style={{ paddingBottom: "10pt" }}>
-                <Col xs={3} lg={12} style={{ padding: 0 }}>
-                  <a href="/" className="footer-icon">
-                    <FiPhone size={24} />
+                    <FiPhone size={22} />
                   </a>
                   <a
                     href="/"
                     className="footer-icon"
-                    style={{ marginRight: "15px" }}
+                    style={{ marginRight: "25px" }}
                   >
-                    <FiMail size={24} />
+                    <FiMail size={22} />
                   </a>
-                </Col>
-                <Col xs={9} lg={12} style={{ padding: 0 }}>
-                  <div
-                    style={{ display: "flex", flexDirection: "row-reverse" }}
+                  <p
+                    className="font-200 m-0"
+                    style={{
+                      color: "white",
+                      fontSize: "0.8rem",
+                      paddingRight: "10pt",
+                    }}
+                    href="/"
                   >
-                    <p
-                      className="font-200 m-0"
-                      style={{
-                        color: "white",
-                        fontSize: "0.8rem",
-                      }}
-                      href="/"
-                    >
-                      Privacy Policy
-                    </p>
-
-                    <p
-                      className="font-200 m-0"
-                      style={{
-                        color: "white",
-                        fontSize: "0.8rem",
-                        paddingRight: "10pt",
-                      }}
-                      href="/"
-                    >
-                      Terms & Conditions
-                    </p>
-                  </div>
+                    Terms & Conditions
+                  </p>
+                  <p
+                    className="font-200 m-0"
+                    style={{
+                      color: "white",
+                      fontSize: "0.8rem",
+                    }}
+                    href="/"
+                  >
+                    Privacy Policy
+                  </p>
                 </Col>
               </Row>
 
@@ -233,7 +202,7 @@ const Footer = () => {
               <Col sm="auto" lg={12}>
                 <div id="PrivacyConditions" className="text-center">
                   <small
-                    className="font-200 ms-4"
+                    className="font-200"
                     style={{ color: "white", fontSize: "0.7rem" }}
                     href="/"
                   >

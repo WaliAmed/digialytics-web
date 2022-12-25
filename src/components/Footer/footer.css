@@ -18,7 +18,7 @@
 }
 
 .footer-icon {
-  margin-right: 6pt;
+  margin-right: 8pt;
   color: white;
 }
 
@@ -48,8 +48,9 @@
 
 @media (max-width: 480px) {
   #Footer {
-    padding-top: 140pt !important;
-    background-image: url("../../assets/images/footerBgMb.png") !important;
+    padding-top: 60pt !important;
+    margin-top: 35pt !important;
+    background-image: url("../../assets/images/footerBgMb2.png") !important;
   }
   #FooterWhite {
     padding-top: 140pt;
@@ -98,7 +99,7 @@
     justify-content: center !important;
   }
   .footer-icon {
-    margin-right: 5pt !important;
+    margin-right: 13pt !important;
   }
   #footerLogoSection div {
     width: 100% !important;

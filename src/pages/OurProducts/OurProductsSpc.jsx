@@ -219,6 +219,7 @@ const OurProductsSpc = () => {
                       cursor: "pointer",
                       textDecoration: "underline",
                       fontSize: "14px",
+                      fontWeight: "500",
                     }}
                     onClick={() => window.scrollTo(0, 0)}
                   >

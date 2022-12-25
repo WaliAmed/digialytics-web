@@ -20,34 +20,41 @@ import ResearchIcon from "../../assets/icons/ResearchIcon";
 import SoftwareDevelopment from "../../assets/icons/SoftwareDevelopment";
 import Automation from "../../assets/icons/Automation";
 import TransparentCard from "../../components/Cards/TransparentCard";
+import { useMediaQuery } from "react-responsive";
 import ContactUsSection from "../../components/ContactUsSection/contactUs";
 
 //Apis
 import FetchAllProducts from "../../Api/fetchAllProducts";
 
 const HomePage = () => {
+  const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
+
   const [NewsLetterBtnLoader, setNewsLetterBtnLoader] = useState(false);
   const [NewsLetterEmail, setNewsLetterEmail] = useState("");
 
   const executeScroll = () => {
-    let contactUs = document.getElementById("contact-us-section");
-    contactUs.scrollIntoView();
+    // let contactUs = document.getElementById("contact-us-section");
+    // contactUs.scrollIntoView();
   };
   const executeScrollToAboutUs = () => {
-    let AboutUs = document.getElementById("about-us-section");
-    AboutUs.scrollIntoView();
+    // let AboutUs = document.getElementById("about-us-section");
+    // AboutUs.scrollIntoView();
   };
 
   let location = useLocation();
 
   useEffect(() => {
+    console.log(location);
     setTimeout(function () {
       var currentUrlWithoutParams = window.location.href;
       if (currentUrlWithoutParams.includes("#contact-us-section")) {
-        executeScroll();
+        // executeScroll();
+        window.scrollTo(0, isMobileScreen === false ? 3800 : 3000);
       }
       if (currentUrlWithoutParams.includes("#about-us-section")) {
-        executeScrollToAboutUs();
+        // executeScrollToAboutUs();
+        if (isMobileScreen) window.scrollTo(0, 400);
+        if (!isMobileScreen) window.scrollTo(0, 600);
       }
     }, 500);
   }, [location]);
@@ -62,42 +69,93 @@ const HomePage = () => {
     <div className="container-fluied">
       {/*Hero*/}
       <Container id="Starter">
-        <Row id="hero-section" style={{ marginBottom: "40pt" }}>
-          <Col sm={12} lg={7} className="hero-left">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                height: "100%",
-              }}
+        {isMobileScreen && (
+          <Row id="hero-section" style={{ marginBottom: "40pt" }}>
+            <Col sm={12} lg={7} className="hero-left">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
+                <h1 className="font-500 mobile-title">
+                  INNOVATION. EFFICIENCY. RELIABILITY.
+                </h1>
+
+                <p style={{ width: "100%", marginTop: "22px" }}>
+                  Providing customers all around the globe with the best
+                  computer software solutions. Developing algorithms and
+                  methodologies for your problems using advanced software
+                  techniques, like Artificial Intelligence and Machine Learning,
+                  to improve the efficiency and quality of your product.
+                </p>
+
+                <a href="#news-letter" className="hero-button">
+                  <SharedButton title="SUBSCRIBE" />
+                </a>
+              </div>
+            </Col>
+
+            <Col sm={12} lg={5} className="hero-right">
+              <img
+                src="assets/Laptop.png"
+                alt="img"
+                style={{ height: "290pt" }}
+              />
+            </Col>
+          </Row>
+        )}
+
+        {!isMobileScreen && (
+          <Row id="hero-section" style={{ marginBottom: "40pt" }}>
+            <Col
+              sm={12}
+              lg={5}
+              className="hero-right"
+              style={{ marginBottom: "30pt" }}
             >
-              <h1 className="font-500 mobile-title">
-                INNOVATION. EFFICIENCY. RELIABILITY.
-              </h1>
+              <img
+                src="assets/Laptop.png"
+                alt="img"
+                style={{ height: "290pt" }}
+              />
+            </Col>
 
-              <p style={{ width: "100%", marginTop: "22px" }}>
-                Providing customers all around the globe with the best computer
-                software solutions. Developing algorithms and methodologies for
-                your problems using advanced software techniques, like
-                Artificial Intelligence and Machine Learning, to improve the
-                efficiency and quality of your product.
-              </p>
+            <Col
+              sm={12}
+              lg={7}
+              className="hero-left"
+              style={{ marginBottom: "15pt" }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
+                <h1 className="font-500 mobile-title">
+                  INNOVATION. EFFICIENCY. RELIABILITY.
+                </h1>
 
-              <a href="#news-letter" className="hero-button">
-                <SharedButton title="SUBSCRIBE" />
-              </a>
-            </div>
-          </Col>
+                <p style={{ width: "100%", marginTop: "16px" }}>
+                  Providing customers all around the globe with the best
+                  computer software solutions. Developing algorithms and
+                  methodologies for your problems using advanced software
+                  techniques, like Artificial Intelligence and Machine Learning,
+                  to improve the efficiency and quality of your product.
+                </p>
 
-          <Col sm={12} lg={5} className="hero-right">
-            <img
-              src="assets/Laptop.png"
-              alt="img"
-              style={{ height: "290pt" }}
-            />
-          </Col>
-        </Row>
+                <a href="#news-letter" className="hero-button">
+                  <SharedButton title="SUBSCRIBE" />
+                </a>
+              </div>
+            </Col>
+          </Row>
+        )}
       </Container>
 
       {/*About Us*/}
@@ -112,15 +170,20 @@ const HomePage = () => {
           paddingBottom: "100px",
         }}
       >
-        <Col lg={12} className="text-center py-4">
-          <h3 className="font-300" style={{ marginBottom: "50pt" }}>
+        <Col lg={12} className="text-center py-3">
+          <h3
+            className="font-300"
+            style={{
+              marginBottom: `${isMobileScreen === false ? "20pt" : "50pt"}`,
+            }}
+          >
             ABOUT US
           </h3>
           <h1 className="mt-3 font-500 mobile-title">
-            You Imagine it. We Deliver it.
+            You imagine it. We deliver it.
           </h1>
         </Col>
-        <Col lg={12} className="text-center pb-4">
+        <Col lg={12} className="text-center">
           <div
             style={{
               display: "flex",
@@ -270,7 +333,7 @@ const HomePage = () => {
             <div id="newsLetterInput" className="me-5" style={{ width: "30%" }}>
               <input
                 className="newsletter"
-                placeholder="Email Id"
+                placeholder="Email ID"
                 value={NewsLetterEmail}
                 onChange={(e) => setNewsLetterEmail(e.target.value)}
               />
@@ -441,6 +504,7 @@ const HomePage = () => {
                 cursor: "pointer",
                 textDecoration: "underline",
                 fontSize: "14px",
+                fontWeight: "500",
               }}
               onClick={() => window.scrollTo(0, 0)}
             >

@@ -4,7 +4,7 @@ const TransparentCard = (props) => {
   return (
     <div
       id="transparent-card"
-      className="py-4 px-3"
+      className="pb-4 px-3"
       style={{ backgroundColor: "white" }}
     >
       <img src={props.img} alt="img" style={{ height: "160pt" }} />

@@ -7,8 +7,12 @@
 .navBar {
   border: 0.5px solid rgb(208, 208, 208) !important;
   border-left: none !important;
-  border-radius: none !important;
+  border-right: none !important;
   border-top: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
 #navnav {
@@ -40,8 +44,12 @@
   border-radius: 50px;
   color: white !important;
   width: 100pt;
-  text-align: center;
   background: var(--main-color);
+  padding-top: 6pt !important;
+  padding-bottom: 6pt !important;
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 14px !important;
   border: 1px solid var(--main-color-2) !important;
 }
 
@@ -169,7 +177,7 @@
   mix-blend-mode: normal;
   border: 1px solid #ffffff28;
   box-shadow: 0px 3px 26px rgba(0, 0, 0, 0.16);
-  padding: 3% 14% 3% 4%;
+  padding: 3% 14% 3% 7%;
 }
 
 .small-box2 {
@@ -286,7 +294,7 @@
     background-image: url("../assets/images/newsLetterBgMb.png") !important;
   }
   #Starter {
-    margin-top: 90pt;
+    margin-top: 50pt;
   }
   #ourstoriesBg {
     background-image: url("../assets/images/blogsBgMb.png");
@@ -323,7 +331,6 @@
     margin-top: 5px;
   }
   #hero-section {
-    margin-top: 20pt !important;
     margin-bottom: 20pt !important;
     text-align: center;
   }
@@ -419,7 +426,7 @@
     width: 100% !important;
   }
   #contact-us-button {
-    margin-top: 1rem !important;
+    margin-top: 30pt !important;
     justify-content: center !important;
   }
   .contact-us-spc4r {
@@ -438,7 +445,8 @@
     margin-top: 5pt;
   }
   #NewsLetterButton button {
-    width: 40% !important;
+    width: 30% !important;
+    font-weight: 500;
   }
   #WebLogo {
     height: 22pt !important;
@@ -467,12 +475,10 @@
   }
   .domain-list {
     text-align: left !important;
+    padding-left: 3.5px !important;
   }
   #DomainImage {
     display: block !important;
-  }
-  .domain-list {
-    padding-left: 0px !important;
   }
   #ourDomainRow {
     margin-bottom: 60pt !important;
@@ -548,6 +554,12 @@
     padding-left: 16pt !important;
     padding-right: 16pt !important;
   }
+  .sol-row {
+    margin-bottom: 50pt !important;
+  }
+  .sol-row p {
+    margin-bottom: 1rem !important;
+  }
   #SmallBoxes {
     padding-left: 7pt !important;
     padding-right: 7pt !important;
@@ -557,7 +569,7 @@
     padding-right: 7pt !important;
   }
   .small-box2 {
-    padding: 3% 14% 3% 4% !important;
+    padding: 3% 14% 8% 7% !important;
   }
   #allprjs {
     padding-left: 20pt !important;
@@ -572,6 +584,12 @@
   }
   #SolutionHeading {
     padding-top: 40pt !important;
+  }
+  .canvas-icon svg {
+    color: #002419 !important;
+  }
+  .navitems a {
+    margin-left: 0 !important;
   }
 }
 
