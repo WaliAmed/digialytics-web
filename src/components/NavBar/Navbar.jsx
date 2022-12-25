@@ -105,7 +105,7 @@ const NavbarComponent = () => {
               >
                 Our Products
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 className={`animated-border ${
                   pathname === "/blog" ? "activeNav" : ""
                 }`}
@@ -113,7 +113,7 @@ const NavbarComponent = () => {
                 href="/blog"
               >
                 Blog
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link
                 className="nav-bar-contactus"
                 onClick={() => {

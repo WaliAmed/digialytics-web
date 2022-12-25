@@ -12,8 +12,7 @@ import "./footer.css";
 import {
   FaFacebookSquare,
   FaInstagram,
-  FaLinkedin,
-  FaTwitterSquare,
+  FaLinkedin
 } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import Logo from "../../assets/images/Digitalytics-white.png";
@@ -65,17 +64,14 @@ const Footer = () => {
                       Follow for more:
                     </small>
 
-                    <a href="/" className="footer-icon">
+                    <a href="https://www.linkedin.com/company/digitalyticsus/" className="footer-icon">
                       <FaLinkedin size={24} />
                     </a>
-                    <a href="/" className="footer-icon">
+                    <a href="https://instagram.com/officialdigitalytics?igshid=YmMyMTA2M2Y=" className="footer-icon">
                       <FaInstagram size={24} />
                     </a>
-                    <a href="/" className="footer-icon">
+                    <a href="https://www.facebook.com/digitalytics.us?mibextid=LQQJ4d" className="footer-icon">
                       <FaFacebookSquare size={24} />
-                    </a>
-                    <a href="/" className="footer-icon m-0">
-                      <FaTwitterSquare size={24} />
                     </a>
                   </div>
                 </Col>
@@ -98,10 +94,10 @@ const Footer = () => {
                       Contact:
                     </small>
 
-                    <a href="/" className="footer-icon">
+                    <a href="tel:7739432790" className="footer-icon">
                       <FiPhone size={24} />
                     </a>
-                    <a href="/" className="footer-icon">
+                    <a href="mailto:contactus@digitalytics.us" className="footer-icon">
                       <FiMail size={24} />
                     </a>
                   </div>

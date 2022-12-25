@@ -4,7 +4,7 @@ import "./cards.css";
 
 const BorderedCard = (props) => {
   return (
-    <Card style={{ width: "20rem" }} id="bordered-card">
+    <Card style={{ width: "20rem", length: "40rem" }} id="bordered-card">
       <Card.Img variant="top" src="assets/laptop-img.png" />
       <Card.Body>
         <div className="mb-2">
