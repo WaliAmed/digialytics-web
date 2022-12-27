@@ -146,12 +146,10 @@ const Footer = () => {
             <div>
               <Row style={{ paddingBottom: "5pt" }}>
                 <Col
-                  xs={12}
-                  lg={12}
+                  xs={4}
                   style={{
                     padding: 0,
                     display: "flex",
-                    justifyContent: "center",
                     alignItems: "center",
                   }}
                 >
@@ -165,6 +163,26 @@ const Footer = () => {
                   >
                     <FiMail size={22} />
                   </a>
+                </Col>
+                <Col
+                  xs={8}
+                  style={{
+                    padding: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row-reverse",
+                  }}
+                >
+                  <p
+                    className="font-200 m-0"
+                    style={{
+                      color: "white",
+                      fontSize: "0.8rem",
+                    }}
+                    href="/"
+                  >
+                    Privacy Policy
+                  </p>
                   <p
                     className="font-200 m-0"
                     style={{
@@ -175,16 +193,6 @@ const Footer = () => {
                     href="/"
                   >
                     Terms & Conditions
-                  </p>
-                  <p
-                    className="font-200 m-0"
-                    style={{
-                      color: "white",
-                      fontSize: "0.8rem",
-                    }}
-                    href="/"
-                  >
-                    Privacy Policy
                   </p>
                 </Col>
               </Row>

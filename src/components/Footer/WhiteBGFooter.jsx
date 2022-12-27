@@ -9,23 +9,15 @@ import Col from "react-bootstrap/Col";
 import "./footer.css";
 
 //Icons
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitterSquare,
-} from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
 import Logo from "../../assets/images/Digitalytics2.png";
 
-const WhiteFooter = () => {
+const Footer = () => {
   const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
 
   return (
-    <div
-      className="container-fluied  pb-4 text-black"
-      style={{ paddingTop: "50pt" }}
-    >
+    <div id="FooterWhite" className="container-fluied pb-4 text-white">
       <div
         style={{
           display: "flex",
@@ -54,26 +46,41 @@ const WhiteFooter = () => {
                   id="footerCol"
                   sm={12}
                   lg={3}
-                  style={{ display: "flex", justifyContent: "center" }}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   <div>
                     <small
                       className="font-200"
-                      style={{ marginRight: "8pt", fontSize: "0.7rem" }}
+                      style={{
+                        marginRight: "8pt",
+                        fontSize: "0.8rem",
+                        color: "#212121",
+                      }}
                     >
                       Follow for more:
                     </small>
-                    <a href="/" className="footer-icon">
-                      <FaLinkedin size={20} color={"black"} />
+
+                    <a
+                      href="https://www.linkedin.com/company/digitalyticsus/"
+                      className="footer-icon"
+                    >
+                      <FaLinkedin size={24} color={"#212121"} />
                     </a>
-                    <a href="/" className="footer-icon">
-                      <FaInstagram size={20} color={"black"} />
+                    <a
+                      href="https://instagram.com/officialdigitalytics?igshid=YmMyMTA2M2Y="
+                      className="footer-icon"
+                    >
+                      <FaInstagram size={24} color={"#212121"} />
                     </a>
-                    <a href="/" className="footer-icon">
-                      <FaFacebookSquare size={20} color={"black"} />
-                    </a>
-                    <a href="/" className="footer-icon m-0">
-                      <FaTwitterSquare size={20} color={"black"} />
+                    <a
+                      href="https://www.facebook.com/digitalytics.us?mibextid=LQQJ4d"
+                      className="footer-icon"
+                    >
+                      <FaFacebookSquare size={24} color={"#212121"} />
                     </a>
                   </div>
                 </Col>
@@ -82,20 +89,32 @@ const WhiteFooter = () => {
                   id="footerCol"
                   sm="auto"
                   lg={3}
-                  style={{ display: "flex", justifyContent: "center" }}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   <div>
                     <small
                       className="font-200"
-                      style={{ marginRight: "8pt", fontSize: "0.7rem" }}
+                      style={{
+                        marginRight: "8pt",
+                        fontSize: "0.8rem",
+                        color: "#212121",
+                      }}
                     >
                       Contact:
                     </small>
-                    <a href="/" className="footer-icon">
-                      <FiPhone size={20} color={"black"} />
+
+                    <a href="tel:7739432790" className="footer-icon">
+                      <FiPhone size={24} color={"#212121"} />
                     </a>
-                    <a href="/" className="footer-icon">
-                      <FiMail size={20} color={"black"} />
+                    <a
+                      href="mailto:contactus@digitalytics.us"
+                      className="footer-icon"
+                    >
+                      <FiMail size={24} color={"#212121"} />
                     </a>
                   </div>
                 </Col>
@@ -113,7 +132,8 @@ const WhiteFooter = () => {
                   <p
                     className="font-200 m-0"
                     style={{
-                      fontSize: "0.7rem",
+                      color: "#212121",
+                      fontSize: "0.8rem",
                       paddingLeft: "10pt",
                     }}
                     href="/"
@@ -124,7 +144,8 @@ const WhiteFooter = () => {
                   <p
                     className="font-200 m-0"
                     style={{
-                      fontSize: "0.7rem",
+                      color: "#212121",
+                      fontSize: "0.8rem",
                     }}
                     href="/"
                   >
@@ -133,89 +154,66 @@ const WhiteFooter = () => {
                 </Col>
               </Row>
 
-              <hr id="hr" />
+              <hr id="hr-white-footer" />
             </div>
           )}
 
           {!isMobileScreen && (
             <div>
-              <Row style={{ paddingBottom: "10pt" }}>
-                <Col xs={6} lg={12} style={{ padding: 0 }}>
-                  <div>
-                    <img src={Logo} alt="logo" style={{ height: "20pt" }} />
-                  </div>
-                </Col>
+              <Row style={{ paddingBottom: "5pt" }}>
                 <Col
-                  xs={6}
-                  lg={12}
+                  xs={4}
                   style={{
                     padding: 0,
                     display: "flex",
-                    flexDirection: "row-reverse",
+                    alignItems: "center",
                   }}
                 >
-                  <a href="/" className="footer-icon m-0">
-                    <FaTwitterSquare size={24} color={"black"} />
-                  </a>
-
                   <a href="/" className="footer-icon">
-                    <FaFacebookSquare size={24} color={"black"} />
-                  </a>
-
-                  <a href="/" className="footer-icon">
-                    <FaInstagram size={24} color={"black"} />
-                  </a>
-
-                  <a href="/" className="footer-icon">
-                    <FaLinkedin size={24} color={"black"} />
-                  </a>
-                </Col>
-              </Row>
-
-              <Row style={{ paddingBottom: "10pt" }}>
-                <Col xs={3} lg={12} style={{ padding: 0 }}>
-                  <a href="/" className="footer-icon">
-                    <FiPhone size={24} color={"black"} />
+                    <FiPhone size={22} color={"#212121"} />
                   </a>
                   <a
                     href="/"
                     className="footer-icon"
-                    style={{ marginRight: "15px" }}
+                    style={{ marginRight: "25px" }}
                   >
-                    <FiMail size={24} color={"black"} />
+                    <FiMail size={22} color={"#212121"} />
                   </a>
                 </Col>
-                <Col xs={9} lg={12} style={{ padding: 0 }}>
-                  <div
-                    style={{ display: "flex", flexDirection: "row-reverse" }}
+                <Col
+                  xs={8}
+                  style={{
+                    padding: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row-reverse",
+                  }}
+                >
+                  <p
+                    className="font-200 m-0"
+                    style={{
+                      color: "#212121",
+                      fontSize: "0.8rem",
+                    }}
+                    href="/"
                   >
-                    <p
-                      className="font-200 m-0"
-                      style={{
-                        color: "black",
-                        fontSize: "0.8rem",
-                      }}
-                      href="/"
-                    >
-                      Privacy Policy
-                    </p>
-
-                    <p
-                      className="font-200 m-0"
-                      style={{
-                        color: "black",
-                        fontSize: "0.8rem",
-                        paddingRight: "10pt",
-                      }}
-                      href="/"
-                    >
-                      Terms & Conditions
-                    </p>
-                  </div>
+                    Privacy Policy
+                  </p>
+                  <p
+                    className="font-200 m-0"
+                    style={{
+                      color: "#212121",
+                      fontSize: "0.8rem",
+                      paddingRight: "10pt",
+                    }}
+                    href="/"
+                  >
+                    Terms & Conditions
+                  </p>
                 </Col>
               </Row>
 
-              <hr id="hr" />
+              <hr id="hr-white-footer" />
             </div>
           )}
 
@@ -224,8 +222,8 @@ const WhiteFooter = () => {
               <Col sm="auto" lg={12}>
                 <div id="PrivacyConditions" className="text-center">
                   <small
-                    className="font-200 ms-4"
-                    style={{ color: "black", fontSize: "0.7rem" }}
+                    className="font-200"
+                    style={{ color: "#212121", fontSize: "0.7rem" }}
                     href="/"
                   >
                     Copyright © 2021 Digitalytics - All Rights Reserved
@@ -240,4 +238,4 @@ const WhiteFooter = () => {
   );
 };
 
-export default WhiteFooter;
+export default Footer;

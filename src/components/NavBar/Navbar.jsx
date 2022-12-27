@@ -19,6 +19,7 @@ import {
 const NavbarComponent = () => {
   const { pathname } = window.location;
   const isMobileScreen = useMediaQuery({ query: "(min-width: 480px)" });
+  const isBurgerIcon = useMediaQuery({ query: "(min-width: 991px)" });
 
   const [show, setShow] = useState(false);
 
@@ -49,11 +50,13 @@ const NavbarComponent = () => {
           show={show}
           onHide={handleClose}
           // id="offcanvasNavbar-expand-md"
-          id={`${isMobileScreen === false ? "" : "offcanvasNavbar-expand-md"}`}
+          id={`${isBurgerIcon === false ? "" : "offcanvasNavbar-expand-md"}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           // placement={`${isMobileScreen === false ? "start" : "end"}`}
           placement="start"
-          style={{ marginRight: `${isMobileScreen && "-40px"}` }}
+          style={{
+            marginRight: `${isMobileScreen && "-40px"}`,
+          }}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
@@ -68,7 +71,14 @@ const NavbarComponent = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="navitems">
+            <Nav
+              className="navitems"
+              style={{
+                display: `${isBurgerIcon === true ? "" : "flex"}`,
+                alignItems: `${isBurgerIcon === true ? "" : "center"}`,
+                textAlign: `${isBurgerIcon === true ? "" : "center"}`,
+              }}
+            >
               <Nav.Link
                 className="animated-border"
                 onClick={() => {
@@ -128,8 +138,8 @@ const NavbarComponent = () => {
               </Nav.Link>
             </Nav>
 
-            {!isMobileScreen && (
-              <Row style={{ marginTop: "280pt" }}>
+            {!isBurgerIcon && (
+              <Row style={{ marginTop: "45vh" }}>
                 <Col
                   lg={12}
                   style={{

@@ -12,7 +12,7 @@ const ProductCard = (props) => {
         background: "linear-gradient(180deg, #38786A 0%, #002419 100%)",
         borderRadius: "6.3px",
         padding: "19px 19px 19px 19px",
-        minHeight: "100%",
+        // minHeight: "100%",
       }}
       onClick={() => navigate("/our-products/" + props.link)}
     >
@@ -33,7 +33,7 @@ const ProductCard = (props) => {
       <div style={{ textAlign: "end", marginTop: "5pt" }}>
         <a
           href={"/our-products/" + props.link}
-          className="text-white font-200"
+          className="text-white font-200 read-more"
           style={{ fontSize: "9px", textDecoration: "none" }}
         >
           Read more <BsArrowRightShort size={14} />

@@ -49,7 +49,7 @@ const HomePage = () => {
       var currentUrlWithoutParams = window.location.href;
       if (currentUrlWithoutParams.includes("#contact-us-section")) {
         // executeScroll();
-        window.scrollTo(0, isMobileScreen === false ? 3800 : 3000);
+        window.scrollTo(0, isMobileScreen === false ? 3800 : 3200);
       }
       if (currentUrlWithoutParams.includes("#about-us-section")) {
         // executeScrollToAboutUs();
@@ -102,7 +102,7 @@ const HomePage = () => {
               <img
                 src="assets/Laptop.png"
                 alt="img"
-                style={{ height: "290pt" }}
+                style={{ height: "28vw" }}
               />
             </Col>
           </Row>
@@ -384,7 +384,7 @@ const HomePage = () => {
           <>
             <Row>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div id="prj-slider" style={{ width: "75%" }}>
+                <div id="prj-slider" style={{ width: "780pt" }}>
                   <ProjectSlider allProducts={allProducts} />
                 </div>
               </div>

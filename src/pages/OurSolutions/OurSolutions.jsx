@@ -14,7 +14,7 @@ const OurSolutions = () => {
       className="OurSolutionsPage pb-5"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(251.06deg, #004C3F 0%, #002419 83.97%)",
+        background: "linear-gradient(310.4deg, #004C3F 28.37%, #002419 82.4%)",
       }}
     >
       <Row
