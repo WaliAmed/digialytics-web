@@ -131,7 +131,7 @@ const NavbarComponent = () => {
                   handleClose();
                 }}
                 style={{
-                  marginTop: `${isMobileScreen === false ? "20pt" : ""}`,
+                  marginTop: `${isBurgerIcon === false ? "20pt" : ""}`,
                 }}
               >
                 Contact Us
@@ -149,7 +149,7 @@ const NavbarComponent = () => {
                   }}
                 >
                   <a href="/" className="canvas-icon">
-                    <FaLinkedin size={24} color={"green"} />
+                    <FaLinkedin size={24} color={"#002419"} />
                   </a>
 
                   <a
@@ -157,7 +157,7 @@ const NavbarComponent = () => {
                     className="canvas-icon"
                     style={{ marginRight: "5pt", marginLeft: "10pt" }}
                   >
-                    <FaInstagram size={24} color={"green"} />
+                    <FaInstagram size={24} color={"#002419"} />
                   </a>
 
                   <a
@@ -165,11 +165,11 @@ const NavbarComponent = () => {
                     className="canvas-icon"
                     style={{ marginLeft: "5pt", marginRight: "10pt" }}
                   >
-                    <FaFacebookSquare size={24} color={"green"} />
+                    <FaFacebookSquare size={24} color={"#002419"} />
                   </a>
 
                   <a href="/" className="canvas-icon">
-                    <FaTwitterSquare size={24} color={"green"} />
+                    <FaTwitterSquare size={24} color={"#002419"} />
                   </a>
                 </Col>
               </Row>
