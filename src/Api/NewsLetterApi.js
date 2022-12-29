@@ -20,19 +20,20 @@ const NewsLetterApi = (
     redirect: "follow",
   };
 
-  fetch(process.env.REACT_APP_API_URL + "/newsLetter/send", requestOptions)
+  fetch(
+    process.env.REACT_APP_API_URL + "/send-news-letter-message",
+    requestOptions
+  )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
-
-      if (result.message && result.message.errors) {
-        toast.error("Error!");
-        setLoader(false);
-      } else if (result) {
+      if (result.status) {
         toast.success("Subscribed successfully!");
         setLoader(false);
         setNewsLetterBtnLoader("");
         setNewsLetterEmail("");
+      } else {
+        toast.error("Error!");
+        setLoader(false);
       }
     })
     .catch((error) => console.log("error", error));

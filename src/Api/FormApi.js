@@ -18,15 +18,10 @@ const FormApi = (data, setLoader, setFormData, getError) => {
     redirect: "follow",
   };
 
-  fetch(process.env.REACT_APP_API_URL + "/form/create", requestOptions)
+  fetch(process.env.REACT_APP_API_URL + "/contacts", requestOptions)
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
-
-      if (result.message && result.message.errors) {
-        toast.error("Error!");
-        setLoader(false);
-      } else if (result) {
+      if (result.status) {
         toast.success("Message sent successfully!");
         setLoader(false);
         getError([{ field: "", message: "" }]);
@@ -38,6 +33,9 @@ const FormApi = (data, setLoader, setFormData, getError) => {
             message: "",
           },
         ]);
+      } else {
+        toast.error("Error!");
+        setLoader(false);
       }
     })
     .catch((error) => {

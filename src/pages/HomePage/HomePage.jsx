@@ -334,6 +334,7 @@ const HomePage = () => {
               <input
                 className="newsletter"
                 placeholder="Email ID"
+                type="email"
                 value={NewsLetterEmail}
                 onChange={(e) => setNewsLetterEmail(e.target.value)}
               />
