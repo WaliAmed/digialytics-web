@@ -102,40 +102,6 @@ const Footer = () => {
                     </a>
                   </div>
                 </Col>
-
-                <Col
-                  id="footerLogoSection"
-                  sm="auto"
-                  lg={3}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "row-reverse",
-                  }}
-                >
-                  <p
-                    className="font-200 m-0"
-                    style={{
-                      color: "white",
-                      fontSize: "0.8rem",
-                      paddingLeft: "10pt",
-                    }}
-                    href="/"
-                  >
-                    Terms & Conditions
-                  </p>
-
-                  <p
-                    className="font-200 m-0"
-                    style={{
-                      color: "white",
-                      fontSize: "0.8rem",
-                    }}
-                    href="/"
-                  >
-                    Privacy Policy
-                  </p>
-                </Col>
               </Row>
 
               <hr id="hr" />
@@ -153,11 +119,11 @@ const Footer = () => {
                     alignItems: "center",
                   }}
                 >
-                  <a href="/" className="footer-icon">
+                  <a href="tel:7739432790" className="footer-icon">
                     <FiPhone size={22} />
                   </a>
                   <a
-                    href="/"
+                    href="mailto:contactus@digitalytics.us"
                     className="footer-icon"
                     style={{ marginRight: "25px" }}
                   >
@@ -165,35 +131,31 @@ const Footer = () => {
                   </a>
                 </Col>
                 <Col
-                  xs={8}
+                  xs={4}
                   style={{
                     padding: 0,
                     display: "flex",
                     alignItems: "center",
-                    flexDirection: "row-reverse",
                   }}
                 >
-                  <p
-                    className="font-200 m-0"
-                    style={{
-                      color: "white",
-                      fontSize: "0.8rem",
-                    }}
-                    href="/"
-                  >
-                    Privacy Policy
-                  </p>
-                  <p
-                    className="font-200 m-0"
-                    style={{
-                      color: "white",
-                      fontSize: "0.8rem",
-                      paddingRight: "10pt",
-                    }}
-                    href="/"
-                  >
-                    Terms & Conditions
-                  </p>
+                <div>
+                <small
+                  className="font-200"
+                  style={{ marginRight: "8pt", fontSize: "0.8rem" }}
+                >
+                  Follow for more:
+                </small>
+
+                <a href="https://www.linkedin.com/company/digitalyticsus/" className="footer-icon">
+                  <FaLinkedin size={22} />
+                </a>
+                <a href="https://instagram.com/officialdigitalytics?igshid=YmMyMTA2M2Y=" className="footer-icon">
+                  <FaInstagram size={22} />
+                </a>
+                <a href="https://www.facebook.com/digitalytics.us?mibextid=LQQJ4d" className="footer-icon">
+                  <FaFacebookSquare size={22} />
+                </a>
+                </div>
                 </Col>
               </Row>
 

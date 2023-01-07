@@ -18,7 +18,7 @@ const FormApi = (data, setLoader, setFormData, getError) => {
     redirect: "follow",
   };
 
-  fetch(process.env.REACT_APP_API_URL + "/contacts", requestOptions)
+  fetch("http://latest.digitalytics.us" + "/api/contacts", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result.status) {

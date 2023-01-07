@@ -318,7 +318,6 @@ const HomePage = () => {
             Sign-up FREE and subscribe to our latest news, information blogs,
             offers and discounts.
           </p>
-          <p className="font-300 m-0">NO CREDIT CARD REQUIRED!</p>
         </Col>
         <Col lg={12} className="text-center pb-4">
           <div

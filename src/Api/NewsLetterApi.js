@@ -21,7 +21,7 @@ const NewsLetterApi = (
   };
 
   fetch(
-    process.env.REACT_APP_API_URL + "/send-news-letter-message",
+    "http://latest.digitalytics.us/api/send-news-letter-message",
     requestOptions
   )
     .then((response) => response.json())
